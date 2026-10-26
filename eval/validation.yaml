@@ -1,0 +1,253 @@
+# hype-checker 보류 검증셋 v1 (텍스트 입력 식별)
+#
+# 2026-10-24 작성, **첫 실행 전에 커밋해 고정**한다. 실행 결과를 보고 이 파일을 고치지 않는다.
+# 출처: research log.md·requests/hype-checker-feasibility.md 카드가 gh api로 실측해 인용한 레포 37개.
+#       2026-10-24 gh api로 존재·정본 이름 재확인. 정답셋(goldset.yaml)과 설계·보정에 쓴 레포
+#       (Ruflo·REA·kordoc·im-not-ai·OmniRoute·LiteLLM·GENEXIS·Starguard·deps.dev·MCP registry 등)는 뺐다.
+# 입력: 고정 템플릿 하나에 레포 이름만 끼운 캡션(작성자 편향 방지). 대조군 4건은 도구가 없는 캡션.
+# 한계: 실제 게시물이 아니라 합성 캡션이라 추출 난도는 실제보다 낮다. 식별(동명 레포 구분)이 주 측정 대상.
+# 채점: goldset과 같은 scoring.py. 그룹 V-text는 식별(고정 분모)이 주 지표, V-control은 정밀도.
+
+cases:
+  - id: v-agent-skills
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. agent-skills 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: agent-skills, kind: repo, role: primary, identifier: vercel-labs/agent-skills, identifier_status: annotated}
+  - id: v-jadx-ai-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. jadx-ai-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: jadx-ai-mcp, kind: mcp, role: primary, identifier: zinja-coder/jadx-ai-mcp, identifier_status: annotated}
+  - id: v-yt-dlp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. yt-dlp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: yt-dlp, kind: repo, role: primary, identifier: yt-dlp/yt-dlp, identifier_status: annotated}
+  - id: v-awesome-design-md
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. awesome-design-md 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: awesome-design-md, kind: repo, role: primary, identifier: VoltAgent/awesome-design-md, identifier_status: annotated}
+  - id: v-hwp-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. hwp-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: hwp-mcp, kind: mcp, role: primary, identifier: treesoop/hwp-mcp, identifier_status: annotated}
+  - id: v-notebooklm-py
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. notebooklm-py 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: notebooklm-py, kind: repo, role: primary, identifier: teng-lin/notebooklm-py, identifier_status: annotated}
+  - id: v-faster-whisper
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. faster-whisper 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: faster-whisper, kind: repo, role: primary, identifier: SYSTRAN/faster-whisper, identifier_status: annotated}
+  - id: v-instagrapi
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. instagrapi 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: instagrapi, kind: repo, role: primary, identifier: subzeroid/instagrapi, identifier_status: annotated}
+  - id: v-summarize
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. summarize 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: summarize, kind: repo, role: primary, identifier: steipete/summarize, identifier_status: annotated}
+  - id: v-podcastfy
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. podcastfy 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: podcastfy, kind: repo, role: primary, identifier: souzatharsis/podcastfy, identifier_status: annotated}
+  - id: v-socket-cli
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. socket-cli 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: socket-cli, kind: repo, role: primary, identifier: SocketDev/socket-cli, identifier_status: annotated}
+  - id: v-agent-scan
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. agent-scan 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: agent-scan, kind: repo, role: primary, identifier: snyk/agent-scan, identifier_status: annotated}
+  - id: v-scorecard
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. scorecard 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: scorecard, kind: repo, role: primary, identifier: ossf/scorecard, identifier_status: annotated}
+  - id: v-n8n
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. n8n 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: n8n, kind: repo, role: primary, identifier: n8n-io/n8n, identifier_status: annotated}
+  - id: v-ida-pro-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. ida-pro-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: ida-pro-mcp, kind: mcp, role: primary, identifier: mrexodia/ida-pro-mcp, identifier_status: annotated}
+  - id: v-whisperx
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. whisperX 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: whisperX, kind: repo, role: primary, identifier: m-bain/whisperX, identifier_status: annotated}
+  - id: v-npq
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. npq 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: npq, kind: repo, role: primary, identifier: lirantal/npq, identifier_status: annotated}
+  - id: v-openfactverification
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. OpenFactVerification 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: OpenFactVerification, kind: repo, role: primary, identifier: Libr-AI/OpenFactVerification, identifier_status: annotated}
+  - id: v-ghidramcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. GhidraMCP 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: GhidraMCP, kind: mcp, role: primary, identifier: LaurieWired/GhidraMCP, identifier_status: annotated}
+  - id: v-karakeep
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. karakeep 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: karakeep, kind: repo, role: primary, identifier: karakeep-app/karakeep, identifier_status: annotated}
+  - id: v-vane
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. Vane 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: Vane, kind: repo, role: primary, identifier: ItzCrazyKns/Vane, identifier_status: annotated}
+  - id: v-instaloader
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. instaloader 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: instaloader, kind: repo, role: primary, identifier: instaloader/instaloader, identifier_status: annotated}
+  - id: v-starscout
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. StarScout 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: StarScout, kind: repo, role: primary, identifier: hehao98/StarScout, identifier_status: annotated}
+  - id: v-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: mcp, kind: mcp, role: primary, identifier: google/mcp, identifier_status: annotated}
+  - id: v-whisper-cpp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. whisper.cpp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: whisper.cpp, kind: repo, role: primary, identifier: ggml-org/whisper.cpp, identifier_status: annotated}
+  - id: v-repoguard
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. repoguard 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: repoguard, kind: repo, role: primary, identifier: entropyvortex/repoguard, identifier_status: annotated}
+  - id: v-daily-stars-explorer
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. daily-stars-explorer 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: daily-stars-explorer, kind: repo, role: primary, identifier: emanuelef/daily-stars-explorer, identifier_status: annotated}
+  - id: v-rhwp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. rhwp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: rhwp, kind: repo, role: primary, identifier: edwardkim/rhwp, identifier_status: annotated}
+  - id: v-dembrandt
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. dembrandt 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: dembrandt, kind: repo, role: primary, identifier: dembrandt/dembrandt, identifier_status: annotated}
+  - id: v-guarddog
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. guarddog 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: guarddog, kind: repo, role: primary, identifier: DataDog/guarddog, identifier_status: annotated}
+  - id: v-reverse-engineering-assistant
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. reverse-engineering-assistant 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: reverse-engineering-assistant, kind: repo, role: primary, identifier: cyberkaida/reverse-engineering-assistant, identifier_status: annotated}
+  - id: v-skill-scanner
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. skill-scanner 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: skill-scanner, kind: repo, role: primary, identifier: cisco-ai-defense/skill-scanner, identifier_status: annotated}
+  - id: v-chrome-devtools-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. chrome-devtools-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: chrome-devtools-mcp, kind: mcp, role: primary, identifier: ChromeDevTools/chrome-devtools-mcp, identifier_status: annotated}
+  - id: v-chatwoot
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. chatwoot 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: chatwoot, kind: repo, role: primary, identifier: chatwoot/chatwoot, identifier_status: annotated}
+  - id: v-better-icons
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. better-icons 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: better-icons, kind: repo, role: primary, identifier: better-auth/better-icons, identifier_status: annotated}
+  - id: v-ghidra-mcp
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. ghidra-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: ghidra-mcp, kind: mcp, role: primary, identifier: bethington/ghidra-mcp, identifier_status: annotated}
+  - id: v-python-hwpx
+    group: V-text
+    input: {type: text, text: "요즘 개발자들 사이에서 이거 진짜 많이 써요. python-hwpx 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요"}
+    expected:
+      entities:
+        - {name: python-hwpx, kind: repo, role: primary, identifier: airmang/python-hwpx, identifier_status: annotated}
+  - id: v-control-1
+    group: V-control
+    input: {type: text, text: "오늘은 개발 공부할 때 집중력 높이는 습관 3가지를 알려드릴게요. 끝까지 보시면 도움 됩니다"}
+    expected:
+      entities: []
+  - id: v-control-2
+    group: V-control
+    input: {type: text, text: "신입 개발자 연봉 협상할 때 꼭 해야 할 말, 댓글에 '협상' 남기면 정리본 보내드려요"}
+    expected:
+      entities: []
+  - id: v-control-3
+    group: V-control
+    input: {type: text, text: "코딩테스트 준비는 하루 2문제씩 꾸준히. 3개월이면 확실히 달라집니다"}
+    expected:
+      entities: []
+  - id: v-control-4
+    group: V-control
+    input: {type: text, text: "이직 준비하면서 느낀 점: 포트폴리오보다 중요한 건 내가 만든 걸 설명하는 능력이에요"}
+    expected:
+      entities: []

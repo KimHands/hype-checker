@@ -1,0 +1,329 @@
+{
+  "ran_at": "2026-10-24T03:29:48Z",
+  "groups": [
+    "A-reel",
+    "B-github"
+  ],
+  "allow_download": false,
+  "summary": {
+    "A-reel": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "url_normalization": null,
+      "extraction_recall": 0.364,
+      "extraction_precision": 0.333,
+      "resolution_top1": 1.0,
+      "resolved_precision": 1.0,
+      "counts": {
+        "cases": 6,
+        "extraction.gold_primary": 11,
+        "extraction.found": 4,
+        "extraction.predicted_primary": 12,
+        "extraction.predicted_primary_matched": 4,
+        "extraction.role_correct": 4,
+        "resolution.annotated": 1,
+        "resolution.top1_correct": 1,
+        "resolution.resolved": 1,
+        "resolution.resolved_correct": 1
+      }
+    },
+    "B-github": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "url_normalization": 1.0,
+      "extraction_recall": null,
+      "extraction_precision": null,
+      "resolution_top1": null,
+      "resolved_precision": null,
+      "counts": {
+        "cases": 6,
+        "url_normalization.cases": 6,
+        "url_normalization.correct": 6
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 60,
+  "review_queue": [
+    {
+      "gold": "InspoAI",
+      "top": null,
+      "status": "unresolved",
+      "case": "2026-10-01-design-ref-mcp5"
+    },
+    {
+      "gold": "graphify",
+      "top": "Graphify-Labs/graphify",
+      "status": "ambiguous",
+      "case": "2026-08-23-graphify"
+    },
+    {
+      "gold": "Claude Figma 커넥터",
+      "top": "timbookipi/bookipi-claude-figma-connector-plugin",
+      "status": "unresolved",
+      "case": "2026-08-23-figma-connector-ppt"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-liner-search-mcp",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-68baa21e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-10-01-ruflo",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-fdd9bf8f",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1
+        },
+        "review_queue": []
+      },
+      "gh_calls": 9,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-10-01-design-ref-mcp5",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-ed28f7f3",
+      "score": {
+        "extraction": {
+          "gold_primary": 5,
+          "found": 1,
+          "predicted_primary": 5,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0
+        },
+        "review_queue": [
+          {
+            "gold": "InspoAI",
+            "top": null,
+            "status": "unresolved"
+          }
+        ]
+      },
+      "gh_calls": 5,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-graphify",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-d7deb114",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0
+        },
+        "review_queue": [
+          {
+            "gold": "graphify",
+            "top": "Graphify-Labs/graphify",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-ui-ai-tell-3tips",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-f9d128ce",
+      "score": {
+        "extraction": {
+          "gold_primary": 2,
+          "found": 0,
+          "predicted_primary": 3,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 3,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-figma-connector-ppt",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-032812-local-02eca885",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Claude Figma 커넥터",
+            "top": "timbookipi/bookipi-claude-figma-connector-plugin",
+            "status": "unresolved"
+          }
+        ]
+      },
+      "gh_calls": 1,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-10-16-kordoc",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-0d37007d",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    },
+    {
+      "id": "2026-10-14-rea",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-92705331",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    },
+    {
+      "id": "2026-09-14-im-not-ai",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-230c57a9",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 4,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    },
+    {
+      "id": "2026-09-07-omniroute",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-586d93ec",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    },
+    {
+      "id": "2026-09-07-litellm",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-e2820020",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 10,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    },
+    {
+      "id": "2026-09-01-genexis-gpt-image-skill",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-032812-github-695493df",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 4,
+      "evidence": "not_run",
+      "extraction": "not_run"
+    }
+  ]
+}

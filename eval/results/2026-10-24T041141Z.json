@@ -1,0 +1,758 @@
+{
+  "ran_at": "2026-10-24T04:11:41Z",
+  "groups": [
+    "C-youtube",
+    "D-control"
+  ],
+  "allow_download": true,
+  "summary": {
+    "C-youtube": {
+      "cases": 4,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 4,
+      "url_normalization": null,
+      "extraction_recall": 0.5,
+      "extraction_recall_strict": 0.25,
+      "extraction_precision": 0.667,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 4,
+        "degraded": 4,
+        "extraction.gold_primary": 4,
+        "extraction.found": 2,
+        "extraction.found_strict": 1,
+        "extraction.predicted_primary": 3,
+        "extraction.predicted_primary_matched": 2,
+        "extraction.role_correct": 2,
+        "identification.annotated": 0,
+        "identification.correct": 0,
+        "resolution.annotated": 0,
+        "resolution.top1_correct": 0,
+        "resolution.resolved": 0,
+        "resolution.resolved_correct": 0,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 2,
+        "none_exists.wrongly_resolved": 0
+      }
+    },
+    "D-control": {
+      "cases": 2,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 2,
+      "url_normalization": null,
+      "extraction_recall": null,
+      "extraction_recall_strict": null,
+      "extraction_precision": null,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 2,
+        "degraded": 2,
+        "extraction.gold_primary": 0,
+        "extraction.found": 0,
+        "extraction.found_strict": 0,
+        "extraction.predicted_primary": 0,
+        "extraction.predicted_primary_matched": 0,
+        "extraction.role_correct": 0,
+        "identification.annotated": 0,
+        "identification.correct": 0,
+        "resolution.annotated": 0,
+        "resolution.top1_correct": 0,
+        "resolution.resolved": 0,
+        "resolution.resolved_correct": 0,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 12,
+  "review_queue": [],
+  "results": [
+    {
+      "id": "2026-08-31-buzz",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-90230d77",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "partial",
+      "extraction": "skipped",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "2026-09-03-aside",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-47a405ad",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "partial",
+      "extraction": "ok",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "Aside",
+          "name_latin": "Aside",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "AI 브라우저 Aside",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드 코드를 쓰시는 분들은",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "ChatGPT",
+          "name_latin": "ChatGPT",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "ChatGPT의 뭐",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드에서는",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Perplexity",
+          "name_latin": "Perplexity",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Perplexity의 코멧",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Gemini",
+          "name_latin": "Gemini",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Gemini가 달려서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Playwright",
+          "name_latin": "Playwright",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Playwright라는 MCP를 연결해서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "MCP",
+          "name_latin": "MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "mentioned",
+          "evidence_quote": "Playwright라는 MCP를 연결해서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "1Password",
+          "name_latin": "1Password",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "1Password를 쓰거든요",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Comet",
+          "name_latin": "Comet",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Comet이나",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Atlas",
+          "name_latin": "Atlas",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "아틀라스,",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "KoRail",
+          "name_latin": "KoRail",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "코레일",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Notion",
+          "name_latin": "Notion",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "노션을 연결해뒀는데",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Slack",
+          "name_latin": "Slack",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "슬랙이나 텔레그램을 연결해서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Discord",
+          "name_latin": "Discord",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "디스코드도 있겠지만",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "NVIDIA NIM",
+          "name_latin": "NVIDIA NIM",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "엔비디아 NIM",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Chrome",
+          "name_latin": "Chrome",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "크롬 브라우저",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cocam",
+          "name_latin": "Cocam",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "코멧 브라우저",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Arc",
+          "name_latin": "Arc",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "아크라는 브라우저가 나왔을 때에도",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-31-claude-design",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-46378838",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 2,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 6,
+      "evidence": "partial",
+      "extraction": "ok",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "Claude Design",
+          "name_latin": "Claude Design",
+          "spellings": [
+            "ClaudeDesign",
+            "Claude-Design"
+          ],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "It’s called the Design skill. It was designed so that we can bring in and use Claude Design from any of Anthropic's tools.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "WebAssembly/design",
+                "source": "github",
+                "score": 3,
+                "stars": 11628,
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              },
+              {
+                "identifier": "buzzfeed/design",
+                "source": "github",
+                "score": 3,
+                "stars": 735,
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              },
+              {
+                "identifier": "ros2/design",
+                "source": "github",
+                "score": 3,
+                "stars": 246,
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              }
+            ],
+            "term": "design"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "slash design skill",
+          "name_latin": "slash design skill",
+          "spellings": [
+            "Slash Design Skill",
+            "Design Skill"
+          ],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "So easy. First, once you update Claude to the latest version, when you press the slash key, you will now see this \" design\" skill. Now, if you click on this, you just need to enter what you want to design.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "Numaphor/slash-design",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'slash design'"
+                ]
+              },
+              {
+                "identifier": "ArelyMoron/Slash-Design",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'slash design'"
+                ]
+              },
+              {
+                "identifier": "IBM-Design/slash-design",
+                "source": "github",
+                "score": 2,
+                "stars": 0,
+                "evidence": [
+                  "github name match 2",
+                  "term 'slash design'"
+                ]
+              }
+            ],
+            "term": "slash design"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Anthropic",
+          "name_latin": "Anthropic",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Since Claude Design, Anthropic has released its biggest design-related update yet.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "you can enjoy the advantages of both Claude Code and Claude Design.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-31-grok-bot-review",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-df9b1e1c",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "partial",
+      "extraction": "skipped",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "2026-09-19-dontouch-temu",
+      "group": "D-control",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-70ada75d",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "partial",
+      "extraction": "skipped",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "2026-09-24-atlassian-layoff",
+      "group": "D-control",
+      "status": "scored",
+      "bundle": "out/20261024-041037-youtube-219e3da6",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "partial",
+      "extraction": "skipped",
+      "degraded": true,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    }
+  ]
+}

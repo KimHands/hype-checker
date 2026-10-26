@@ -1,0 +1,365 @@
+{
+  "ran_at": "2026-10-24T03:35:24Z",
+  "groups": [
+    "A-reel"
+  ],
+  "allow_download": false,
+  "summary": {
+    "A-reel": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 0,
+      "url_normalization": null,
+      "extraction_recall": 0.909,
+      "extraction_recall_strict": 0.727,
+      "extraction_precision": 0.75,
+      "identification": 0.8,
+      "resolution_top1_given_found": 0.8,
+      "resolved_precision": 1.0,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 6,
+        "degraded": 0,
+        "extraction.gold_primary": 11,
+        "extraction.found": 10,
+        "extraction.found_strict": 8,
+        "extraction.predicted_primary": 12,
+        "extraction.predicted_primary_matched": 9,
+        "extraction.role_correct": 9,
+        "identification.annotated": 5,
+        "identification.correct": 4,
+        "resolution.annotated": 5,
+        "resolution.top1_correct": 4,
+        "resolution.resolved": 4,
+        "resolution.resolved_correct": 4,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 36,
+  "review_queue": [
+    {
+      "gold": "InspoAI",
+      "top": "dcarvalh/inspoAI",
+      "status": "ambiguous",
+      "case": "2026-10-01-design-ref-mcp5"
+    },
+    {
+      "gold": "Lazyweb",
+      "top": "https://www.lazyweb.com/mcp/public",
+      "status": "ambiguous",
+      "case": "2026-10-01-design-ref-mcp5"
+    },
+    {
+      "gold": "graphify",
+      "top": "Graphify-Labs/graphify",
+      "status": "ambiguous",
+      "case": "2026-08-23-graphify"
+    },
+    {
+      "gold": "Playwright MCP",
+      "top": "microsoft/playwright",
+      "status": "ambiguous",
+      "case": "2026-08-23-ui-ai-tell-3tips"
+    },
+    {
+      "gold": "Claude Figma 커넥터",
+      "top": null,
+      "status": "skipped_mentioned",
+      "case": "2026-08-23-figma-connector-ppt"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-liner-search-mcp",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-68baa21e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    },
+    {
+      "id": "2026-10-01-ruflo",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-fdd9bf8f",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 9,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    },
+    {
+      "id": "2026-10-01-design-ref-mcp5",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-ed28f7f3",
+      "score": {
+        "extraction": {
+          "gold_primary": 5,
+          "found": 5,
+          "found_strict": 5,
+          "predicted_primary": 5,
+          "predicted_primary_matched": 5,
+          "role_correct": 5
+        },
+        "identification": {
+          "annotated": 3,
+          "correct": 2
+        },
+        "resolution": {
+          "annotated": 3,
+          "top1_correct": 2,
+          "resolved": 2,
+          "resolved_correct": 2,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "InspoAI",
+            "top": "dcarvalh/inspoAI",
+            "status": "ambiguous"
+          },
+          {
+            "gold": "Lazyweb",
+            "top": "https://www.lazyweb.com/mcp/public",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 11,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    },
+    {
+      "id": "2026-08-23-graphify",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-d7deb114",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "graphify",
+            "top": "Graphify-Labs/graphify",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 4,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    },
+    {
+      "id": "2026-08-23-ui-ai-tell-3tips",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-f9d128ce",
+      "score": {
+        "extraction": {
+          "gold_primary": 2,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 3,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Playwright MCP",
+            "top": "microsoft/playwright",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 9,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    },
+    {
+      "id": "2026-08-23-figma-connector-ppt",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-02eca885",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Claude Figma 커넥터",
+            "top": null,
+            "status": "skipped_mentioned"
+          }
+        ]
+      },
+      "gh_calls": 3,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      }
+    }
+  ],
+  "stage": "self-pass",
+  "rescored_from": "eval/results/2026-10-24T033524Z.json",
+  "rescored_at": "2026-10-24T03:44:09Z",
+  "scope_note": "invariant_violations covers the original code run only; commands run by the judging session (resume/drop) are listed per case in 'interventions', not re-checked here",
+  "interventions": 0
+}

@@ -1,0 +1,74 @@
+
+# watch: video report
+
+- **Source:** eval/media/2026-10-01_2.mp4
+- **Local media:** `eval/media/2026-10-01_2.mp4`
+- **Title:** 2026-10-01_2.mp4
+- **Duration:** 01:21 (80.5s)
+- **Resolution:** 720x1280 (h264)
+- **Detail:** efficient
+- **Frames:** 17 selected from 17 candidates (keyframe, full range, budget 20, cap 20)
+- **Frame size:** max 768px wide, max 1998px tall
+- **Transcript:** 28 segments (via whisper (groq))
+
+## Frames
+
+Frames live at: `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames`
+
+**Read each frame path below with the Read tool to view the image.** Frames are in chronological order; `t=MM:SS` is the absolute timestamp in the source video.
+
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0001.jpg` (t=00:00, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0002.jpg` (t=00:05, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0003.jpg` (t=00:10, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0004.jpg` (t=00:15, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0005.jpg` (t=00:20, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0006.jpg` (t=00:25, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0007.jpg` (t=00:30, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0008.jpg` (t=00:35, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0009.jpg` (t=00:40, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0010.jpg` (t=00:45, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0011.jpg` (t=00:50, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0012.jpg` (t=00:55, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0013.jpg` (t=01:00, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0014.jpg` (t=01:05, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0015.jpg` (t=01:10, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0016.jpg` (t=01:15, reason=keyframe)
+- `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece/frames/frame_0017.jpg` (t=01:20, reason=keyframe)
+
+## Transcript
+
+_Source: whisper (groq)._
+
+```
+[00:00] 클로드 코드한테 혼자 다 시키는 거 당장 멈추세요.
+[00:03] 이 도구 하나면 클로드 코드의 AI 개발팀이 통째로 생겨요.
+[00:07] 내가 말 한마디 하면 AI 여러 명이 역할을 나눠서 동시에 일합니다.
+[00:11] 바로 루플로라는 무료 오픈소스예요.
+[00:14] 클로드 코드가 실력 좋은 개발자 한 명이라면
+[00:16] 루플로는 그 개발자를 팀으로 일하게 만들어줘요.
+[00:19] 예를 들어 로그인 기능을 시키면
+[00:21] 팀장 AI가 먼저 이를 쪽에서 역할별로 나눠줘요.
+[00:25] 기획 담당은 흐름을 짜고 개발 담당은 코드를 쓰고
+[00:28] 테스트 담당은 직접 돌려보고
+[00:30] 리뷰랑 보안 담당은 문제를 찾아요.
+[00:32] 그러면서 알게 된 건 공용 노트에 적어뒀다가
+[00:34] 다음 작업 때 다시 꺼냈어요.
+[00:37] 설정은 프로젝트마다 딱 한 번이에요.
+[00:39] 노드 JS랑 클로드 코드만 있으면
+[00:41] 프로젝트 폴더에서 설치 명령어 한 줄 넣고
+[00:43] 점검 명령어로 확인하면 끝이에요.
+[00:46] 그다음부턴 클로드 코드 채팅창에
+[00:48] 루플로 멀티 에이전트 방식으로 해줘
+[00:50] 이렇게 말만 하면 돼요.
+[00:52] 그런데 처음 쓸 때 꼭 피해야 할 게 하나 있어요.
+[00:54] 루플로를 붙이자마자 바로 기능부터 만들게 하는 거예요.
+[00:57] AI팀이 내 프로젝트를 파악하기도 전에 파일부터 고칠 수 있거든요
+[01:01] 처음엔 분석만 시키고 계획을 확인한 다음에 진행하라고 하세요
+[01:05] 특히 분석을 시킬 때 어떤 조건을 붙이느냐에 따라 결과가 완전히 달라지거든요
+[01:09] 그래서 분석용부터 기능 추가, 버그 수정, 코드 리뷰까지
+[01:13] 그대로 복사해서 쓰는 프롬프트를 정리해뒀어요
+[01:16] OOO 팔로우하고 클로드 댓글 남기면 정리 가이드 보내드릴게요
+```
+
+---
+_Work dir: `/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece` — delete when done._

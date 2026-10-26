@@ -1,0 +1,2659 @@
+{
+  "ran_at": "2026-10-26T00:59:47Z",
+  "groups": [
+    "C-youtube",
+    "D-control"
+  ],
+  "allow_download": true,
+  "summary": {
+    "C-youtube": {
+      "cases": 4,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 0,
+      "url_normalization": null,
+      "extraction_recall": 1.0,
+      "extraction_recall_strict": 0.75,
+      "extraction_precision": 1.0,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 1,
+      "counts": {
+        "cases": 4,
+        "degraded": 0,
+        "extraction.gold_primary": 4,
+        "extraction.found": 4,
+        "extraction.found_strict": 3,
+        "extraction.predicted_primary": 4,
+        "extraction.predicted_primary_matched": 4,
+        "extraction.role_correct": 6,
+        "identification.annotated": 0,
+        "identification.correct": 0,
+        "resolution.annotated": 0,
+        "resolution.top1_correct": 0,
+        "resolution.resolved": 0,
+        "resolution.resolved_correct": 0,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 3,
+        "none_exists.wrongly_resolved": 1
+      }
+    },
+    "D-control": {
+      "cases": 2,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 1,
+      "url_normalization": null,
+      "extraction_recall": null,
+      "extraction_recall_strict": null,
+      "extraction_precision": 1.0,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 2,
+        "degraded": 1,
+        "extraction.gold_primary": 0,
+        "extraction.found": 0,
+        "extraction.found_strict": 0,
+        "extraction.predicted_primary": 1,
+        "extraction.predicted_primary_matched": 1,
+        "extraction.role_correct": 0,
+        "identification.annotated": 0,
+        "identification.correct": 0,
+        "resolution.annotated": 0,
+        "resolution.top1_correct": 0,
+        "resolution.resolved": 0,
+        "resolution.resolved_correct": 0,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 12,
+  "review_queue": [
+    {
+      "gold": "Buzz",
+      "top": "buzz-language/buzz",
+      "status": "ambiguous",
+      "case": "2026-08-31-buzz"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-08-31-buzz",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-90230d77",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Buzz",
+            "top": "buzz-language/buzz",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 4,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:17Z",
+          "action": "resume",
+          "name": "Buzz",
+          "kind": "repo",
+          "identifier": null,
+          "evidence": "transcript 00:00 'Jack Dorsey, co-founder of Twitter and Block, has created ... open-source software called Buzz, an open-source Slack for AI agents'; title '슬랙을 오픈소스로 풀어버린 Buzz'",
+          "gh_calls": 2
+        },
+        {
+          "at": "2026-10-26T01:26:32Z",
+          "action": "supersede",
+          "retroactive": true,
+          "superseded": 1,
+          "reason": "resume가 같은 이름 후보를 대체하지 않던 버그 보정(소급)"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Buzz",
+            "top": "buzz-language/buzz",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "entities_at_run": [
+        {
+          "name": "Buzz",
+          "name_latin": "Buzz",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "called Buzz, an open-source Slack for AI agents",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "buzz-language/buzz",
+                "source": "github",
+                "score": 4,
+                "stars": 1537,
+                "created_at": "2021-08-15T15:41:50Z",
+                "evidence": [
+                  "github name match 4",
+                  "term 'buzz'"
+                ]
+              },
+              {
+                "identifier": "jaysalvat/buzz",
+                "source": "github",
+                "score": 4,
+                "stars": 1205,
+                "created_at": "2011-06-09T22:57:25Z",
+                "evidence": [
+                  "github name match 3",
+                  "npm:buzz → jaysalvat/buzz",
+                  "term 'buzz'"
+                ]
+              },
+              {
+                "identifier": "block/buzz",
+                "source": "github",
+                "score": 3,
+                "stars": 36456,
+                "created_at": "2026-03-06T21:00:56Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'buzz'"
+                ]
+              }
+            ],
+            "term": "buzz"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code",
+          "name_latin": "Claude Code",
+          "spellings": [
+            "ClaudeCode"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Codex, Claude Code, or Grok",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Grok",
+          "name_latin": "Grok",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Codex, Claude Code, or Grok",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Codex",
+          "name_latin": "Codex",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Codex, Claude Code, or Grok",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "three AIs: Claude, Code, and GPT",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "GPT",
+          "name_latin": "GPT",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "three AIs: Claude, Code, and GPT",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Slack",
+          "name_latin": "Slack",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "services like Slack have a clear operating entity. Right? We know which company runs it",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Rust",
+          "name_latin": "Rust",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "The relay server is written in a language called Rust.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "PostgreSQL",
+          "name_latin": "PostgreSQL",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "For storage, we use PostgreSQL.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Redis",
+          "name_latin": "Redis",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "For real-time functionality, we use Redis.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "MinIO",
+          "name_latin": "MinIO",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "For file storage, we use MinIO; some of you may not have heard of it, but it's actually a container frequently used for emulating S3 when developing locally.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Git",
+          "name_latin": "Git",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "Interestingly, Git is also included. Since the relay acts as a Git server itself, we can manage our project repositories even without GitHub.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Tailscale",
+          "name_latin": "Tailscale",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "or I recommend installing it with one click on a hosting provider. It only costs about 10,000 won per month. I'll put the link in the video description, and if you use my link, you can use it at a much more discounted price with the Code Factory coupon. I recommend at least plan 2, because it provides 8GB of RAM and 4 vCPU cores, which is why I suggest it. When you go to proceed with the purchase. When it asks if you have a coupon code, enter \"Code Factory\" here and apply it. You can see that an additional discount is applied right away. An extra 10%discount is applied. So, if you're going to use a hosting provider, be sure to use my coupon to get the discount. If you click \" Continue\" here. Buzz VPS is automatically installed on that server.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Buzz VPS",
+          "name_latin": "Buzz VPS",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Buzz VPS is",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cursor",
+          "name_latin": "Cursor",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "such as Claude Code, Codex, Cursor, or Grok Build",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Grok Build",
+          "name_latin": "Grok Build",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "such as Claude Code, Codex, Cursor, or Grok Build",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Grok 4.6",
+          "name_latin": "Grok 4.6",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "We'll try using Grok 4.6",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Codex 5.6 Tera",
+          "name_latin": "Codex 5.6 Tera",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "we will use Codex 5.6 Tera",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code Opus",
+          "name_latin": "Claude Code Opus",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Claude Code Opus with a 1-million context window",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "HerMi",
+          "name_latin": "HerMi",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "you can add the HerMi agent",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Kimi",
+          "name_latin": "Kimi",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "and things like Kimi can all be added",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "YouTube Content Researcher",
+          "name_latin": "YouTube Content Researcher",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "I will ask the YouTube Content Researcher to find the latest AI news and recommend topics with the highest view potential",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "YouTube Thumbnail Generator",
+          "name_latin": "YouTube Thumbnail Generator",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "I'll tell the YouTube Thumbnail Generator to create two recommended thumbnails",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Programmer",
+          "name_latin": "Programmer",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "I'll tell the Programmer to build a landing page for a demo and save it as a merged project",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Pulse",
+          "name_latin": "Pulse",
+          "spellings": [],
+          "kind": "feature",
+          "role": "mentioned",
+          "evidence_quote": "There is also something called \"Pulse,\" and what's interesting about it is that you can think of it as a kind of social network",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "OpenAI",
+          "name_latin": "OpenAI",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "it says OpenAI stopped training its next-gen model Astra",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Astra",
+          "name_latin": "Astra",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "it says OpenAI stopped training its next-gen model Astra",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Nosta",
+          "name_latin": "Nosta",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "In my opinion, the company called Nosta",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "North Star",
+          "name_latin": "North Star",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "North Star's position is that they are aiming to become a complete replacement for Slack",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Code Factory",
+          "name_latin": "Code Factory",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "use the Code Factory coupon",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-09-03-aside",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-47a405ad",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 1
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:15Z",
+          "action": "resume",
+          "name": "Aside",
+          "kind": "product",
+          "identifier": "aside.com",
+          "evidence": "frame_0021 t=01:47 tab card reads 'Aside | The browse... aside.com'; frame_0001 t=00:00 landing 'The most intelligent AI assistant, but it's a browser'",
+          "gh_calls": 1
+        },
+        {
+          "at": "2026-10-26T01:26:32Z",
+          "action": "supersede",
+          "retroactive": true,
+          "superseded": 1,
+          "reason": "resume가 같은 이름 후보를 대체하지 않던 버그 보정(소급)"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "entities_at_run": [
+        {
+          "name": "Aside",
+          "name_latin": "Aside",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "AI 브라우저 Aside",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드 코드를 쓰시는 분들은",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "ChatGPT",
+          "name_latin": "ChatGPT",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "ChatGPT의 뭐",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드에서는",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Perplexity",
+          "name_latin": "Perplexity",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Perplexity의 코멧",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Gemini",
+          "name_latin": "Gemini",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Gemini가 달려서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Playwright",
+          "name_latin": "Playwright",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Playwright라는 MCP를 연결해서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "MCP",
+          "name_latin": "MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "mentioned",
+          "evidence_quote": "Playwright라는 MCP를 연결해서",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "1Password",
+          "name_latin": "1Password",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "1Password를 쓰거든요",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Comet",
+          "name_latin": "Comet",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Comet이나",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Atlas",
+          "name_latin": "Atlas",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "아틀라스,",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "KoRail",
+          "name_latin": "KoRail",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "코레일",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "노션",
+          "name_latin": "Notion",
+          "spellings": [
+            "Notion"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "노션 AI를 안 쓰시는 분들은",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "슬랙",
+          "name_latin": "Slack",
+          "spellings": [
+            "Slack"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "슬랙이랑 그리고 MCP",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "MCP 서버",
+          "name_latin": "MCP Server",
+          "spellings": [
+            "MCP Server"
+          ],
+          "kind": "mcp",
+          "role": "mentioned",
+          "evidence_quote": "MCP 서버도 연동할 수 있고요",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-31-claude-design",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-46378838",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:14Z",
+          "action": "resume",
+          "name": "Design skill",
+          "kind": "skill",
+          "identifier": null,
+          "evidence": "frame_0011 t=00:34 Claude app slash menu shows '/design' skill typed; frame_0006 t=00:23 '/design' prompt box; transcript 00:07 'It's called the Design skill'",
+          "gh_calls": 1
+        },
+        {
+          "at": "2026-10-26T01:25:14Z",
+          "action": "drop",
+          "name": "Claude Design",
+          "reason": "underlying Anthropic product referenced as background; the video's subject is the /design skill (kept as 'Design skill')"
+        },
+        {
+          "at": "2026-10-26T01:25:14Z",
+          "action": "drop",
+          "name": "slash design skill",
+          "reason": "duplicate of 'Design skill' (/design)"
+        },
+        {
+          "at": "2026-10-26T01:25:14Z",
+          "action": "drop",
+          "name": "slash-design",
+          "reason": "duplicate of 'Design skill' (/design)"
+        },
+        {
+          "at": "2026-10-26T01:26:32Z",
+          "action": "supersede",
+          "retroactive": true,
+          "superseded": 1,
+          "reason": "resume가 같은 이름 후보를 대체하지 않던 버그 보정(소급)"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "entities_at_run": [
+        {
+          "name": "Claude Design",
+          "name_latin": "Claude Design",
+          "spellings": [],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "Since Claude Design, Anthropic has released its biggest design-related update yet. It’s called the Design skill.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "WebAssembly/design",
+                "source": "github",
+                "score": 3,
+                "stars": 11632,
+                "created_at": "2015-04-29T17:36:05Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              },
+              {
+                "identifier": "buzzfeed/design",
+                "source": "github",
+                "score": 3,
+                "stars": 735,
+                "created_at": "2017-04-04T16:45:57Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              },
+              {
+                "identifier": "ros2/design",
+                "source": "github",
+                "score": 3,
+                "stars": 247,
+                "created_at": "2013-11-08T18:56:29Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'design'"
+                ]
+              }
+            ],
+            "term": "design"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Design skill",
+          "name_latin": "Design skill",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "Since Claude Design, Anthropic has released its biggest design-related update yet. It’s called the Design skill.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "slash design skill",
+          "name_latin": "slash design skill",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "efficient design method according to Anthropic, the slash design skill.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "once you update Claude to the latest version",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Anthropic",
+          "name_latin": "Anthropic",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "According to Anthropic, the slash design skill",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Figma",
+          "name_latin": "Figma",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "edit in tools like Figma or Paper",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Paper",
+          "name_latin": "Paper",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "edit in tools like Figma or Paper",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "클로드 코드",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "as we continue working, more pages will be created, leading to results that can be organized by section. We just need to choose one from here, and since I want to try a bit of a chaotic style, I'll go with C.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "slash-design",
+          "name_latin": "slash-design",
+          "spellings": [],
+          "kind": "skill",
+          "role": "mentioned",
+          "evidence_quote": "using this slash-design skill to keep this process within a single context is a great way to ensure our preferences are reflected",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-31-grok-bot-review",
+      "group": "C-youtube",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-df9b1e1c",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 3
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:17Z",
+          "action": "resume",
+          "name": "Grok Bot",
+          "kind": "product",
+          "identifier": null,
+          "evidence": "frame_0011 t=00:39 landing page 'Meet Grok Bot' (xAI site); frame_0053 t=03:40 'See more ways to use Grok Bot'",
+          "gh_calls": 0
+        },
+        {
+          "at": "2026-10-26T01:25:17Z",
+          "action": "drop",
+          "name": "Grok",
+          "reason": "parent model/brand; duplicate of primary 'Grok Bot'"
+        },
+        {
+          "at": "2026-10-26T01:26:32Z",
+          "action": "supersede",
+          "retroactive": true,
+          "superseded": 1,
+          "reason": "resume가 같은 이름 후보를 대체하지 않던 버그 보정(소급)"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 2,
+          "predicted_primary_matched": 1,
+          "role_correct": 3
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 1,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "entities_at_run": [
+        {
+          "name": "Grok Bot",
+          "name_latin": "Grok Bot",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "saya akan mencoba mengulas Grok Bot.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Open Interpreter",
+          "name_latin": "Open Interpreter",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Open Interpreter maupun LMS, lalu",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "LMS",
+          "name_latin": "LMS",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Open Interpreter maupun LMS, lalu",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Buzz",
+          "name_latin": "Buzz",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "ditambah dengan Buzz. Saya juga akan",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Code",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Claude Code atau Codex juga bisa.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Codex",
+          "name_latin": "Codex",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Claude Code atau Codex juga bisa.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "MCP",
+          "name_latin": "MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "mentioned",
+          "evidence_quote": "tidak ada API atau alat seperti MCP,",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "X",
+          "name_latin": "X",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "perusahaan seperti X yang memiliki",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Grok",
+          "name_latin": "Grok",
+          "spellings": [
+            "Grok Bot"
+          ],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "jika Anda sudah menggunakan Grok Heavy, Anda bisa langsung menghapus semua otomatisasi",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Grok Heavy",
+          "name_latin": "Grok Heavy",
+          "spellings": [
+            "Super Grok Heavy"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "berlangganan Grok Heavy, yaitu Super Grok Heavy",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Super Grok Heavy",
+          "name_latin": "Super Grok Heavy",
+          "spellings": [
+            "Grok Heavy"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "berlangganan Grok Heavy, yaitu Super Grok Heavy",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "OpenKlo",
+          "name_latin": "OpenKlo",
+          "spellings": [],
+          "kind": "unknown",
+          "role": "mentioned",
+          "evidence_quote": "yang selama ini dibuat di OpenKlo dan menjual server komputer Anda",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "lingkungan saat kita menggunakan Claude Code atau Codex di CLI secara umum",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cursor",
+          "name_latin": "Cursor",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Anda bisa menggunakan Cursor Premium Team. Atau Anda juga bisa menggunakan Cursor Ultra",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cursor Premium Team",
+          "name_latin": "Cursor Premium Team",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Anda bisa menggunakan Cursor Premium Team",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cursor Ultra",
+          "name_latin": "Cursor Ultra",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Atau Anda juga bisa menggunakan Cursor Ultra",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Claude Desktop",
+          "name_latin": "Claude Desktop",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "yang saya kerjakan di Claude Desktop.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "ChatGPT",
+          "name_latin": "ChatGPT",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "mendaftarkan otomasi di ChatGPT",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Meta",
+          "name_latin": "Meta",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "menjalankan iklan berbayar di Meta",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "GPT",
+          "name_latin": "GPT",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "simpan dan jalankan di GPT seperti ini",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Hermes",
+          "name_latin": "Hermes",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Grok Bot 너무 좋습니다. Hermes, Openclaw 다 지웠어요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Openclaw",
+          "name_latin": "Openclaw",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Grok Bot 너무 좋습니다. Hermes, Openclaw 다 지웠어요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Gmail",
+          "name_latin": "Gmail",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Kita bisa menghubungkan berbagai layanan seperti Gmail, Google Drive yang umum kita kenal",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Google Drive",
+          "name_latin": "Google Drive",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Kita bisa menghubungkan berbagai layanan seperti Gmail, Google Drive yang umum kita kenal",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Notion",
+          "name_latin": "Notion",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Gmail, Google Drive yang umum kita kenal, Notion, hingga Slack. Saya sendiri sudah menghubungkan semuanya",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Slack",
+          "name_latin": "Slack",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "mentioned",
+          "evidence_quote": "Gmail, Google Drive yang umum kita kenal, Notion, hingga Slack. Saya sendiri sudah menghubungkan semuanya",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Playwright",
+          "name_latin": "Playwright",
+          "spellings": [],
+          "kind": "npm",
+          "role": "mentioned",
+          "evidence_quote": "mau kita harus menggunakan Playwright",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Groq",
+          "name_latin": "Groq",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "kasus Groq, kita bisa menggunakan infrastruktur dari X, sehingga kita",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Oxylabs",
+          "name_latin": "Oxylabs",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "kita harus menggunakan alat otomatisasi infrastruktur seperti Oxylabs",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Airbnb",
+          "name_latin": "Airbnb",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "Airbnb tertentu",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Open-Claude",
+          "name_latin": "Open-Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "sudah memakai agen LLM atau Open-Claude",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "HeyGen",
+          "name_latin": "HeyGen",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "tinggal masuk ke HeyGen buat video, lalu hubungkan ke Hyperframe",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Hyperframe",
+          "name_latin": "Hyperframe",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "tinggal masuk ke HeyGen buat video, lalu hubungkan ke Hyperframe",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-09-19-dontouch-temu",
+      "group": "D-control",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-70ada75d",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:15Z",
+          "action": "drop",
+          "name": "블루오션",
+          "reason": "business concept (blue-ocean market) in a side-hustle interview, not a tool; video has no tool subject"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "entities_at_run": [
+        {
+          "name": "블루오션",
+          "name_latin": "Blue Ocean",
+          "spellings": [
+            "BlueOcean",
+            "BluOcean"
+          ],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": ">> 블루오션 플랫폼에서 판매를 시작했기",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "AI",
+          "name_latin": "AI",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": ">> AI로 생성 그리 끝나요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "테모",
+          "name_latin": "Temo",
+          "spellings": [
+            "Temo"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "[06:22] 사실 테모에서 판매하려면 중국인 판매자들과 경쟁을 해야 되잖아요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "쿠팡",
+          "name_latin": "Coupang",
+          "spellings": [
+            "Coupang"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": ">> 네. 바로 보여 드릴게요. 지금 이게 8월 달 매출이거든요. 저번 달 매출 지금 1억 9천 거의 2억 가까이 나왔습니다. 쿠팡이랑 합치면 거의 5억 정도 나왔죠.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "캔버스",
+          "name_latin": "Canva",
+          "spellings": [
+            "Canva",
+            "Canvas"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "미리 캔버스라는 사이트에 들어와 주세요. 무료로 이용할 수 있는 사이트고요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "크리 에이지",
+          "name_latin": "Crello",
+          "spellings": [
+            "Crello",
+            "CreaAge"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "네. 크리 에이지라는 사이트에 들어와 주시고요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "태무",
+          "name_latin": "TaeMo",
+          "spellings": [
+            "Tae Mo",
+            "TaeMoo"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": ">> 아, 그래서 아까 그 센초자분들도 그렇게 올릴 수가 있는 거구나. >> 네, 맞아요. 리뷰가 없어도 판매가 되는 이유가 해머측에서 자체적으로 무료로 광고를 해주고 무료로 노출을 시켜 주기 때문이에요. >> 그러면 대표님 제가 그냥 바로 시작을 한다 그래도 공짜로 그 혜택들을 다 받아볼 수가 있는 거네요. 테모에서 주는 거.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "해머",
+          "name_latin": "Hammer",
+          "spellings": [
+            "Hammer"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": ">> 아, 그래서 아까 그 센초자분들도 그렇게 올릴 수가 있는 거구나. >> 네, 맞아요. 리뷰가 없어도 판매가 되는 이유가 해머측에서 자체적으로 무료로 광고를 해주고 무료로 노출을 시켜 주기 때문이에요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "네이버",
+          "name_latin": "Naver",
+          "spellings": [
+            "Naver"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": ">> 그죠? 태무는 부흥입니다. 그래서 지금 입점 제한 매일 보시면 광고비 없이 팔리는 채널 지금이 선점 타이밍입니다. >> 이게 나중에 판매자가 좀 몰리거나 이러면 광고비를 받을 수도 있다는 거네. >> 지금이 선점 타이밍인 거죠. 광고비 없고 그다음에 배송 완료 7D 빠른 정산. 아, 그니까 새로운 신규 플랫폼이 만들어졌고 그 플랫폼이 사람이 많이 몰린다 그러면은 먼저 입점하시는 분들만 이제 꿀을 빨더라고요. 그래서 대표님 주변에 알려 주시는 분들도 다 꿀을 빨고 있는 거예요. 지금 >> 너한테 배우시고 매출을 내시고 이렇게 후기를 남겨 주셨는데 11월에 월매출 1900만 원, 12월에 1억 5천만 원 그래서 퇴직을 하셨고요. >> 아, 퇴사시켜 버리셨네요. 대표님. >> 리분 매출 보여 준 걸 보시면 이게 첫 달 매출. >> 네. >> 작년 11월 1,900만 원. 이게 작년 12월 1억 5천만 원. >> 와. 아, 작년 1월에 인증해 주신 건데 1월 1일부터 1월 18일까지 1억 3천만. >> 아, 그냥 이게 바로 시스템만 알면은 복사 붙여 놓기가 가능해 버리네. >> 네, 가능합니다. >> 아, 그리고 또 한 가지 궁금한게 생겼는데 지금 가르쳐 주신 분들은 이미 선점해서 옛날에 배운 분들이라 지금 잘하는 걸 거 아니에요? >> 아, 아닙니다. 지금 보시면은 제가 알려줘서 시작한 지인데. >> 네. 보시면 8월 달에 매출 아예 없죠. 그리고 25일부터 >> 9월 10일 어, >> 대략 2주 동안 매출 600만 원. >> 얼마 전에 만든 건데요? 맞아요. 대략 2주 동안 매출 600만 원인데 사실상 시작한지 2주 됐으니까 >> 와 진짜 대박이다. >> 심지어 상품을 딱 하나만 올린 거거든요. 여러 개 올리면은 더 터지는 >> 뭔지 알려주면 안 돼요? 상품 >> 사과예요. 사과 >> 진짜 그냥 까버리네. 그냥 그 흔하디 흔한 사과를 뉴비가 또 올렸는데 이게 된다고요? >> 네. 되죠. >> 저희 보시는 왕초보자분들한테도 진짜 차근차근 좀 단톡방에서 잘 설명해 주셨으면 좋겠습니다네. 당연히 차근차근 다 알려 드릴 겁니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-09-24-atlassian-layoff",
+      "group": "D-control",
+      "status": "scored",
+      "bundle": "out/20261026-005538-youtube-219e3da6",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 5,
+      "evidence": "ok",
+      "extraction": "partial",
+      "degraded": true,
+      "interventions": [
+        {
+          "at": "2026-10-26T01:25:05Z",
+          "action": "resume",
+          "name": "Sovereign",
+          "kind": "repo",
+          "identifier": null,
+          "evidence": "frame_0155 t=14:11 whiteboard diagram labeled 'Sovereign' (FastAPI→Context/Templates→Envoy); transcript 11:55 'I open sourced this software and I called it Sovereign... find that on Bitbucket'",
+          "gh_calls": 2
+        },
+        {
+          "at": "2026-10-26T01:25:05Z",
+          "action": "drop",
+          "name": "Atlassian",
+          "reason": "career retrospective talk; background company/framework/infra mentioned while describing past work, not a recommended tool"
+        },
+        {
+          "at": "2026-10-26T01:25:05Z",
+          "action": "drop",
+          "name": "Fast API",
+          "reason": "career retrospective talk; background company/framework/infra mentioned while describing past work, not a recommended tool"
+        },
+        {
+          "at": "2026-10-26T01:25:05Z",
+          "action": "drop",
+          "name": "Envoy",
+          "reason": "career retrospective talk; background company/framework/infra mentioned while describing past work, not a recommended tool"
+        },
+        {
+          "at": "2026-10-26T01:25:05Z",
+          "action": "drop",
+          "name": "CloudFormation",
+          "reason": "career retrospective talk; background company/framework/infra mentioned while describing past work, not a recommended tool"
+        },
+        {
+          "at": "2026-10-26T01:26:32Z",
+          "action": "supersede",
+          "retroactive": true,
+          "superseded": 1,
+          "reason": "resume가 같은 이름 후보를 대체하지 않던 버그 보정(소급)"
+        }
+      ],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "score_at_run": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 5,
+          "predicted_primary_matched": 1,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "entities_at_run": [
+        {
+          "name": "Atlassian",
+          "name_latin": "Atlassian",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "I was recently affected by the layoffs made by Atlassian",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "HackerRank",
+          "name_latin": "HackerRank",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "The interview process consisted of a coding quiz on HackerRank, which I aced with full marks",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Cloudflare",
+          "name_latin": "Cloudflare",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "and the white paper was by Cloudflare",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Route 53",
+          "name_latin": "Route 53",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "that Route 53 did a triangulation based",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Amazon application load balances",
+          "name_latin": "Amazon Application Load Balancers",
+          "spellings": [
+            "Amazon Application Load Balancer"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "similar to if you were using Amazon application load balances or the equivalent in any cloud provider",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Fast API",
+          "name_latin": "Fast API",
+          "spellings": [],
+          "kind": "npm",
+          "role": "primary",
+          "evidence_quote": "which is a fast API app. Let's just say we've got fast API",
+          "origin": "transcript",
+          "resolution": {
+            "status": "unresolved",
+            "candidates": [
+              {
+                "identifier": "remsky/Kokoro-FastAPI",
+                "source": "github",
+                "score": 1,
+                "stars": 5591,
+                "created_at": "2024-12-30T11:53:42Z",
+                "evidence": [
+                  "github name match 1",
+                  "term 'fast api'"
+                ]
+              },
+              {
+                "identifier": "s3rius/FastAPI-template",
+                "source": "github",
+                "score": 1,
+                "stars": 2831,
+                "created_at": "2020-10-05T20:29:19Z",
+                "evidence": [
+                  "github name match 1",
+                  "term 'fast api'"
+                ]
+              },
+              {
+                "identifier": "benavlabs/FastAPI-boilerplate",
+                "source": "github",
+                "score": 1,
+                "stars": 2100,
+                "created_at": "2023-09-21T21:57:50Z",
+                "evidence": [
+                  "github name match 1",
+                  "term 'fast api'"
+                ]
+              }
+            ],
+            "term": "fast api"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "DynamoDB",
+          "name_latin": "DynamoDB",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "which was DynamoDB",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "SQS",
+          "name_latin": "SQS",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "send that over SQS. It would drop the task details into SQS",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Open Service Broker",
+          "name_latin": "Open Service Broker",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "as the open service broker that I built",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Envoy proxy",
+          "name_latin": "Envoy proxy",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "the tech that we chose for that was Envoy proxy",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Sovereign",
+          "name_latin": "Sovereign",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "I open sourced this this software and I called it Sovereign",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "sovereign/sovereign",
+                "source": "github",
+                "score": 4,
+                "stars": 10578,
+                "created_at": "2013-08-19T22:09:16Z",
+                "evidence": [
+                  "github name match 4",
+                  "term 'sovereign'"
+                ]
+              },
+              {
+                "identifier": "cetanu/sovereign",
+                "source": "github",
+                "score": 3,
+                "stars": 81,
+                "created_at": "2019-09-17T03:47:13Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'sovereign'"
+                ]
+              },
+              {
+                "identifier": "tylerJPike/sovereign",
+                "source": "github",
+                "score": 3,
+                "stars": 18,
+                "created_at": "2021-03-01T21:55:06Z",
+                "evidence": [
+                  "github name match 3",
+                  "term 'sovereign'"
+                ]
+              }
+            ],
+            "term": "sovereign"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Nginx",
+          "name_latin": "Nginx",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "very similar to something like Nginx",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Envoy",
+          "name_latin": "Envoy",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "just say we've got uh an Envoy here",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "CloudFormation",
+          "name_latin": "CloudFormation",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "they are provisioned by a CloudFormation template",
+          "origin": "transcript",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Packer",
+          "name_latin": "Packer",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "we had uh repository that was using HashiCorp Packer",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Salt Stack",
+          "name_latin": "Salt Stack",
+          "spellings": [],
+          "kind": "repo",
+          "role": "mentioned",
+          "evidence_quote": "a Salt Stack uh let's call it configuration",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "EC2",
+          "name_latin": "EC2",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "we'd use the EC2 provisioner",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Puppet",
+          "name_latin": "Puppet",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "is very similar to Puppet, Ansible, and Chef",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Ansible",
+          "name_latin": "Ansible",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "is very similar to Puppet, Ansible, and Chef",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Chef",
+          "name_latin": "Chef",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "is very similar to Puppet, Ansible, and Chef",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Jira",
+          "name_latin": "Jira",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "We got products like Jira, Confluence, Bitbucket, Status",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Confluence",
+          "name_latin": "Confluence",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "We got products like Jira, Confluence, Bitbucket, Status",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Bitbucket",
+          "name_latin": "Bitbucket",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "We got products like Jira, Confluence, Bitbucket, Status",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Status Page",
+          "name_latin": "Status Page",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "We got products like Jira, Confluence, Bitbucket, Status Page, and many others behind this edge",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "Elysium",
+          "name_latin": "Elysium",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "with with the products that Elysium runs",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    }
+  ],
+  "stage": "blind-pass",
+  "rescored_from": "eval/results/2026-10-26T005947Z.json",
+  "rescored_at": "2026-10-26T01:26:36Z",
+  "scope_note": "invariant_violations covers the original code run only; commands run by the judging session (resume/drop) are listed per case in 'interventions', not re-checked here",
+  "interventions": 19
+}

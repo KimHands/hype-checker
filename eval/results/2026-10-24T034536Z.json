@@ -1,0 +1,1692 @@
+{
+  "ran_at": "2026-10-24T03:45:36Z",
+  "groups": [
+    "A-reel",
+    "B-github"
+  ],
+  "allow_download": false,
+  "summary": {
+    "A-reel": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 0,
+      "url_normalization": null,
+      "extraction_recall": 0.455,
+      "extraction_recall_strict": 0.273,
+      "extraction_precision": 0.333,
+      "identification": 0.4,
+      "resolution_top1_given_found": 1.0,
+      "resolved_precision": 1.0,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 6,
+        "degraded": 0,
+        "extraction.gold_primary": 11,
+        "extraction.found": 5,
+        "extraction.found_strict": 3,
+        "extraction.predicted_primary": 12,
+        "extraction.predicted_primary_matched": 4,
+        "extraction.role_correct": 4,
+        "identification.annotated": 5,
+        "identification.correct": 2,
+        "resolution.annotated": 2,
+        "resolution.top1_correct": 2,
+        "resolution.resolved": 2,
+        "resolution.resolved_correct": 2,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0
+      }
+    },
+    "B-github": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 0,
+      "url_normalization": 1.0,
+      "extraction_recall": null,
+      "extraction_recall_strict": null,
+      "extraction_precision": null,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 6,
+        "degraded": 0,
+        "url_normalization.cases": 6,
+        "url_normalization.correct": 6
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 68,
+  "review_queue": [
+    {
+      "gold": "InspoAI",
+      "top": "Nutlope/inspo",
+      "status": "ambiguous",
+      "case": "2026-10-01-design-ref-mcp5"
+    },
+    {
+      "gold": "graphify",
+      "top": "Graphify-Labs/graphify",
+      "status": "ambiguous",
+      "case": "2026-08-23-graphify"
+    },
+    {
+      "gold": "Claude Figma 커넥터",
+      "top": null,
+      "status": "skipped_mentioned",
+      "case": "2026-08-23-figma-connector-ppt"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-liner-search-mcp",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-68baa21e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "라이너 웹 서치 MCP",
+          "name_latin": "Liner Web Search MCP",
+          "spellings": [
+            "Liner Web Search MCP",
+            "Liner Web Search MCPP"
+          ],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "저는 라이너 웹 서치 MCP를 사용해요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "https://platform.liner.com/api/v1/mcp",
+                "source": "mcp_registry",
+                "score": 5,
+                "stars": 0,
+                "evidence": [
+                  "mcp registry com.liner/search",
+                  "registry namespace com.liner (domain verified)",
+                  "term 'liner'"
+                ]
+              },
+              {
+                "identifier": "peterh/liner",
+                "source": "github",
+                "score": 3,
+                "stars": 1098,
+                "evidence": [
+                  "github name match 3",
+                  "term 'liner'"
+                ]
+              },
+              {
+                "identifier": "MovingtoMars/liner",
+                "source": "github",
+                "score": 3,
+                "stars": 71,
+                "evidence": [
+                  "github name match 3",
+                  "term 'liner'"
+                ]
+              }
+            ],
+            "term": "liner"
+          },
+          "identifier": "https://platform.liner.com/api/v1/mcp",
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-10-01-ruflo",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-fdd9bf8f",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 9,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "루플로",
+          "name_latin": "Ruflo",
+          "spellings": [
+            "Ruflo"
+          ],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "바로 루플로라는 무료 오픈소스예요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "ruvnet/ruflo",
+                "source": "github",
+                "score": 4,
+                "stars": 78816,
+                "evidence": [
+                  "github name match 3",
+                  "npm:ruflo → ruvnet/ruflo",
+                  "term 'ruflo'"
+                ]
+              },
+              {
+                "identifier": "henryalouf/ruflow",
+                "source": "github",
+                "score": 1,
+                "stars": 170,
+                "evidence": [
+                  "github name match 1",
+                  "term 'ruflo'"
+                ]
+              },
+              {
+                "identifier": "Mario-PB/RuFloUI",
+                "source": "github",
+                "score": 1,
+                "stars": 67,
+                "evidence": [
+                  "github name match 1",
+                  "term 'ruflo'"
+                ]
+              }
+            ],
+            "term": "ruflo"
+          },
+          "identifier": "ruvnet/ruflo",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "3.61.0",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": false,
+                "repository": "ruvnet/claude-flow",
+                "repository_matches": true,
+                "maintainers": [
+                  "ruvnet"
+                ],
+                "maintainer_is_owner": true,
+                "downloads_last_month": 222378
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T03:44:34Z"
+            },
+            "depsdev": {
+              "value": null,
+              "status": "failed",
+              "note": "deps.dev version not found",
+              "fetched_at": "2026-10-24T03:44:34Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "ruvnet/ruflo",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 78816,
+                  "forks_count": 9254,
+                  "open_issues_count": 974,
+                  "created_at": "2025-06-02T21:24:20Z",
+                  "pushed_at": "2026-10-24T03:44:23Z",
+                  "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:44:35Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 3,
+                  "days": 511,
+                  "all": {
+                    "spike_days": 60,
+                    "peak_count": 2329,
+                    "peak_ratio": 10.410437618918184,
+                    "spike_star_share": 0.42862399289475356
+                  },
+                  "recent_12w": {
+                    "spike_days": 15,
+                    "peak_count": 677,
+                    "peak_ratio": 5.257472092185812,
+                    "spike_star_share": 0.4442534573013517
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:44:36Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 71,
+                  "top_login": "ruvnet",
+                  "top_share": 0.9239804241435563
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:44:36Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:44:37Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:44:37Z"
+              }
+            }
+          }
+        },
+        {
+          "name": "클로드 코드",
+          "name_latin": "Claude Code",
+          "spellings": [
+            "Claude Code"
+          ],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드 코드가 실력 좋은 개발자 한 명이라면",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "노드 JS",
+          "name_latin": "Node.js",
+          "spellings": [
+            "Node.js",
+            "NodeJS"
+          ],
+          "kind": "npm",
+          "role": "mentioned",
+          "evidence_quote": "노드 JS랑 클로드 코드만 있으면",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-10-01-design-ref-mcp5",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-ed28f7f3",
+      "score": {
+        "extraction": {
+          "gold_primary": 5,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 5,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 3,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "InspoAI",
+            "top": "Nutlope/inspo",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 5,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "모빈 MCP",
+          "name_latin": "Moblin MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "[00:03] 첫 번째는 모빈 MCP입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "eerimoq/moblin",
+                "source": "github",
+                "score": 3,
+                "stars": 772,
+                "evidence": [
+                  "github name match 3",
+                  "term 'moblin'"
+                ]
+              },
+              {
+                "identifier": "datagutt/moblink-rust",
+                "source": "github",
+                "score": 1,
+                "stars": 33,
+                "evidence": [
+                  "github name match 1",
+                  "term 'moblin'"
+                ]
+              },
+              {
+                "identifier": "eerimoq/Moblink",
+                "source": "github",
+                "score": 1,
+                "stars": 28,
+                "evidence": [
+                  "github name match 1",
+                  "term 'moblin'"
+                ]
+              }
+            ],
+            "term": "moblin"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "나이슬리단 MCP",
+          "name_latin": "Naislydan MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "[00:09] 두 번째는 나이슬리단 MCP입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "unresolved",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "레페로 MCP",
+          "name_latin": "Rephero MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "[00:14] 세 번째는 레페로 MCP입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "rabbitsch/RepHero",
+                "source": "github",
+                "score": 3,
+                "stars": 1,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rephero'"
+                ]
+              },
+              {
+                "identifier": "divyag11/rephero",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rephero'"
+                ]
+              },
+              {
+                "identifier": "raihan386/RepHero",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rephero'"
+                ]
+              }
+            ],
+            "term": "rephero"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "레이즈웹 MCP",
+          "name_latin": "Rizeweb MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "[00:19] 네 번째는 레이즈웹 MCP입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "honeac638/RIZEWEB",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rizeweb'"
+                ]
+              },
+              {
+                "identifier": "dariosha10-ops/RIZEweb",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rizeweb'"
+                ]
+              },
+              {
+                "identifier": "pavionekevin2709/FinalProject-RizeWEB",
+                "source": "github",
+                "score": 1,
+                "stars": 0,
+                "evidence": [
+                  "github name match 1",
+                  "term 'rizeweb'"
+                ]
+              }
+            ],
+            "term": "rizeweb"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "인스포 AI MCP",
+          "name_latin": "Inspo AI MCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "[00:23] 다섯 번째는 인스포 AI MCP입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "Nutlope/inspo",
+                "source": "github",
+                "score": 3,
+                "stars": 918,
+                "evidence": [
+                  "github name match 3",
+                  "term 'inspo'"
+                ]
+              },
+              {
+                "identifier": "charmbracelet/inspo",
+                "source": "github",
+                "score": 2,
+                "stars": 107,
+                "evidence": [
+                  "github name match 2",
+                  "term 'inspo'"
+                ]
+              },
+              {
+                "identifier": "https://inspomcp.dev/api/mcp",
+                "source": "mcp_registry",
+                "score": 2,
+                "stars": 0,
+                "evidence": [
+                  "mcp registry io.github.Nutlope/inspo",
+                  "term 'inspo'"
+                ]
+              }
+            ],
+            "term": "inspo"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-graphify",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-d7deb114",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "graphify",
+            "top": "Graphify-Labs/graphify",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 4,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "그래피파이",
+          "name_latin": "Graphify",
+          "spellings": [
+            "GraphiPy",
+            "GraphiFi"
+          ],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "그래피파이가 해결책입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "Graphify-Labs/graphify",
+                "source": "github",
+                "score": 4,
+                "stars": 133953,
+                "evidence": [
+                  "github name match 4",
+                  "term 'graphify'"
+                ]
+              },
+              {
+                "identifier": "Graphitti/graphify",
+                "source": "github",
+                "score": 3,
+                "stars": 108,
+                "evidence": [
+                  "github name match 3",
+                  "term 'graphify'"
+                ]
+              },
+              {
+                "identifier": "raufer/graphify",
+                "source": "github",
+                "score": 3,
+                "stars": 98,
+                "evidence": [
+                  "github name match 3",
+                  "term 'graphify'"
+                ]
+              }
+            ],
+            "term": "graphify"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "클로드 코드",
+          "name_latin": "Claude Code",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "이거 없이 클로드 코드를 쓰고 계신다면",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "클로드",
+          "name_latin": "Claude",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "클로드한테 제 메타 광고 자동화투를 고쳐달라고 했더니",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-ui-ai-tell-3tips",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-f9d128ce",
+      "score": {
+        "extraction": {
+          "gold_primary": 2,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 3,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 7,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "플레이라이트",
+          "name_latin": "Plaeright",
+          "spellings": [
+            "Plaerlight",
+            "Plairight"
+          ],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "찾아보기 누르고 플레이라이트 검색해서 설치하세요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "unresolved",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "테이스티스킬",
+          "name_latin": "TastySkill",
+          "spellings": [
+            "Tastyskill",
+            "TastySkill"
+          ],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "두 번째는 테이스티스킬을 설치하세요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "unresolved",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "이미지 코드",
+          "name_latin": "Image Code",
+          "spellings": [
+            "ImageCode",
+            "Image-Code"
+          ],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "세 번째는 이미지 코드예요.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "McGill-NLP/imagecode",
+                "source": "github",
+                "score": 3,
+                "stars": 42,
+                "evidence": [
+                  "github name match 3",
+                  "term 'imagecode'"
+                ]
+              },
+              {
+                "identifier": "mumuy/imageCode",
+                "source": "github",
+                "score": 3,
+                "stars": 20,
+                "evidence": [
+                  "github name match 3",
+                  "term 'imagecode'"
+                ]
+              },
+              {
+                "identifier": "cgohlke/imagecodecs",
+                "source": "github",
+                "score": 1,
+                "stars": 192,
+                "evidence": [
+                  "github name match 1",
+                  "term 'imagecode'"
+                ]
+              }
+            ],
+            "term": "imagecode"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-08-23-figma-connector-ppt",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-034421-local-02eca885",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Claude Figma 커넥터",
+            "top": null,
+            "status": "skipped_mentioned"
+          }
+        ]
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "클로드 피그마 커넥터",
+          "name_latin": "Claude Figma Connector",
+          "spellings": [
+            "Claude Code Figma Connector",
+            "Claude Figma Plugin"
+          ],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "클로드 피그마 커넥터로 읽히고",
+          "origin": "transcript",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "arnemolland/figma",
+                "source": "github",
+                "score": 3,
+                "stars": 28,
+                "evidence": [
+                  "github name match 3",
+                  "term 'figma'"
+                ]
+              },
+              {
+                "identifier": "selvasachein/Figma",
+                "source": "github",
+                "score": 3,
+                "stars": 5,
+                "evidence": [
+                  "github name match 3",
+                  "term 'figma'"
+                ]
+              },
+              {
+                "identifier": "berlin449/Figma",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'figma'"
+                ]
+              }
+            ],
+            "term": "figma"
+          },
+          "identifier": null,
+          "measurements": {}
+        },
+        {
+          "name": "피그마",
+          "name_latin": "Figma",
+          "spellings": [],
+          "kind": "product",
+          "role": "mentioned",
+          "evidence_quote": "피그마 템플릿을 활용하는 게 핵심입니다.",
+          "origin": "transcript",
+          "resolution": {
+            "status": "skipped_mentioned",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16-kordoc",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-0d37007d",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "kordoc",
+          "name_latin": "kordoc",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/chrisryugj/kordoc",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "chrisryugj/kordoc",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "4.24.1",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": false,
+                "repository": "chrisryugj/kordoc",
+                "repository_matches": true,
+                "maintainers": [
+                  "chrisryugj"
+                ],
+                "maintainer_is_owner": true,
+                "downloads_last_month": 138725
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T03:45:13Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T03:45:14Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "chrisryugj/kordoc",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 2723,
+                  "forks_count": 489,
+                  "open_issues_count": 0,
+                  "created_at": "2026-03-28T08:33:25Z",
+                  "pushed_at": "2026-10-24T03:42:41Z",
+                  "description": "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:14Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 2,
+                  "days": 217,
+                  "all": {
+                    "spike_days": 16,
+                    "peak_count": 187,
+                    "peak_ratio": 16.459627329192546,
+                    "spike_star_share": 0.25376423062798387
+                  },
+                  "recent_12w": {
+                    "spike_days": 8,
+                    "peak_count": 187,
+                    "peak_ratio": 16.459627329192546,
+                    "spike_star_share": 0.4254766031195841
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:15Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 22,
+                  "top_login": "chrisryugj",
+                  "top_share": 0.9276366435719784
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:16Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:16Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:16Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14-rea",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-92705331",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "rea",
+          "name_latin": "rea",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/morluto/rea",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "morluto/rea",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "morluto/rea",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 373790,
+                  "forks_count": 93490,
+                  "open_issues_count": 1472,
+                  "created_at": "2026-04-14T00:51:32Z",
+                  "pushed_at": "2026-10-24T03:44:35Z",
+                  "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:18Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 1,
+                  "days": 196,
+                  "all": {
+                    "spike_days": 30,
+                    "peak_count": 54162,
+                    "peak_ratio": 4978.125,
+                    "spike_star_share": 0.8721929425613312
+                  },
+                  "recent_12w": {
+                    "spike_days": 17,
+                    "peak_count": 54162,
+                    "peak_ratio": 4978.125,
+                    "spike_star_share": 0.8716923463966749
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:19Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "morluto",
+                  "top_share": 0.6208569118835894
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T03:45:19Z"
+              },
+              "releases": {
+                "value": 38,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:20Z"
+              },
+              "fork_star": {
+                "value": "caution",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:20Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2026-09-14-im-not-ai",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-230c57a9",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 4,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "im-not-ai",
+          "name_latin": "im-not-ai",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/epoko77-ai/im-not-ai",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "epoko77-ai/im-not-ai",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "epoko77-ai/im-not-ai",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 6189,
+                  "forks_count": 685,
+                  "open_issues_count": 15,
+                  "created_at": "2026-04-24T12:48:40Z",
+                  "pushed_at": "2026-10-12T09:57:11Z",
+                  "description": "AI가 쓴 한글을 사람 글처럼 윤문하는 Claude 스킬 — Korean AI-text humanizer: detects and rewrites translationese, mechanical parallelism, and 71 other AI tells",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:21Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 1,
+                  "days": 189,
+                  "all": {
+                    "spike_days": 13,
+                    "peak_count": 369,
+                    "peak_ratio": 6.335851648351648,
+                    "spike_star_share": 0.28550654386815316
+                  },
+                  "recent_12w": {
+                    "spike_days": 2,
+                    "peak_count": 59,
+                    "peak_ratio": 1.918075422626788,
+                    "spike_star_share": 0.04450625869262865
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:21Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 20,
+                  "top_login": "epoko77-ai",
+                  "top_share": 0.7251184834123223
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:22Z"
+              },
+              "releases": {
+                "value": 12,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:22Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:22Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2026-09-07-omniroute",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-586d93ec",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 5,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "OmniRoute",
+          "name_latin": "OmniRoute",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/diegosouzapw/OmniRoute",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "diegosouzapw/OmniRoute",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "3.8.52",
+                "install_scripts": {
+                  "postinstall": "node scripts/build/postinstall.mjs"
+                },
+                "git_install_scripts": {
+                  "prepare": "node -e \"try{require.resolve('husky')}catch(e){process.exit(0)};require('child_process').execSync('husky',{stdio:'inherit'})\""
+                },
+                "provenance": true,
+                "repository": "diegosouzapw/OmniRoute",
+                "repository_matches": true,
+                "maintainers": [
+                  "diegosouza.pw"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 212498
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T03:45:23Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T03:45:23Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "cheaper-inference/OmniRoute",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 80445,
+                  "forks_count": 11749,
+                  "open_issues_count": 510,
+                  "created_at": "2026-02-13T12:38:31Z",
+                  "pushed_at": "2026-10-24T00:40:22Z",
+                  "description": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:24Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 2,
+                  "days": 259,
+                  "all": {
+                    "spike_days": 33,
+                    "peak_count": 1846,
+                    "peak_ratio": 9.888220120378332,
+                    "spike_star_share": 0.24086021505376345
+                  },
+                  "recent_12w": {
+                    "spike_days": 0,
+                    "peak_count": 0,
+                    "peak_ratio": 0,
+                    "spike_star_share": 0.0
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:25Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "diegosouzapw",
+                  "top_share": 0.6076930822676467
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T03:45:26Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:28Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:28Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2026-09-07-litellm",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-e2820020",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 10,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "litellm",
+          "name_latin": "litellm",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/BerriAI/litellm",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "BerriAI/litellm",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "BerriAI/litellm",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 61926,
+                  "forks_count": 12618,
+                  "open_issues_count": 5649,
+                  "created_at": "2023-07-27T00:09:52Z",
+                  "pushed_at": "2026-10-24T03:45:25Z",
+                  "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+                  "license": "NOASSERTION"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:30Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 6,
+                  "days": 1190,
+                  "all": {
+                    "spike_days": 51,
+                    "peak_count": 455,
+                    "peak_ratio": 4.292722812755519,
+                    "spike_star_share": 0.08931628072215225
+                  },
+                  "recent_12w": {
+                    "spike_days": 2,
+                    "peak_count": 386,
+                    "peak_ratio": 3.020817029269056,
+                    "spike_star_share": 0.07710911936264049
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:32Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "ishaan-jaff",
+                  "top_share": 0.36775392935609263
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T03:45:33Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:34Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:34Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2026-09-01-genexis-gpt-image-skill",
+      "group": "B-github",
+      "status": "scored",
+      "bundle": "out/20261024-034421-github-695493df",
+      "score": {
+        "url_normalization": {
+          "cases": 1,
+          "correct": 1
+        }
+      },
+      "gh_calls": 4,
+      "evidence": "not_run",
+      "extraction": "not_run",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "gpt-image-skill",
+          "name_latin": "gpt-image-skill",
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "https://github.com/GENEXIS-AI/gpt-image-skill",
+          "origin": "url",
+          "resolution": {
+            "status": "from_url",
+            "candidates": []
+          },
+          "identifier": "GENEXIS-AI/gpt-image-skill",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "GENEXIS-AI/gpt-image-skill",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 178,
+                  "forks_count": 23,
+                  "open_issues_count": 0,
+                  "created_at": "2026-08-26T08:52:50Z",
+                  "pushed_at": "2026-08-28T05:15:07Z",
+                  "description": "Generate GPT images from Codex or Claude Code using a ChatGPT subscription, without the Images API.",
+                  "license": null
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:35Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 1,
+                  "days": 63,
+                  "all": {
+                    "spike_days": 0,
+                    "peak_count": 0,
+                    "peak_ratio": 0,
+                    "spike_star_share": 0.0
+                  },
+                  "recent_12w": {
+                    "spike_days": 0,
+                    "peak_count": 0,
+                    "peak_ratio": 0,
+                    "spike_star_share": 0.0
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:35Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 1,
+                  "top_login": "bear2u",
+                  "top_share": 1.0
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:36Z"
+              },
+              "releases": {
+                "value": 0,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:36Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T03:45:36Z"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

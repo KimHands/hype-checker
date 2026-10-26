@@ -1,0 +1,4142 @@
+{
+  "ran_at": "2026-10-24T04:19:37Z",
+  "groups": "all",
+  "allow_download": false,
+  "summary": {
+    "V-control": {
+      "cases": 4,
+      "skipped": 0,
+      "failed": 0,
+      "degraded": 0,
+      "url_normalization": null,
+      "extraction_recall": null,
+      "extraction_recall_strict": null,
+      "extraction_precision": null,
+      "identification": null,
+      "resolution_top1_given_found": null,
+      "resolved_precision": null,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 4,
+        "degraded": 0,
+        "extraction.gold_primary": 0,
+        "extraction.found": 0,
+        "extraction.found_strict": 0,
+        "extraction.predicted_primary": 0,
+        "extraction.predicted_primary_matched": 0,
+        "extraction.role_correct": 0,
+        "identification.annotated": 0,
+        "identification.correct": 0,
+        "resolution.annotated": 0,
+        "resolution.top1_correct": 0,
+        "resolution.resolved": 0,
+        "resolution.resolved_correct": 0,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0
+      }
+    },
+    "V-text": {
+      "cases": 37,
+      "skipped": 0,
+      "failed": 1,
+      "degraded": 0,
+      "url_normalization": null,
+      "extraction_recall": 0.972,
+      "extraction_recall_strict": 0.639,
+      "extraction_precision": 1.0,
+      "identification": 0.25,
+      "resolution_top1_given_found": 0.829,
+      "resolved_precision": 1.0,
+      "resolved_unmatched": 0,
+      "none_exists_wrongly_resolved": 0,
+      "counts": {
+        "cases": 37,
+        "degraded": 0,
+        "extraction.gold_primary": 36,
+        "extraction.found": 35,
+        "extraction.found_strict": 23,
+        "extraction.predicted_primary": 35,
+        "extraction.predicted_primary_matched": 35,
+        "extraction.role_correct": 35,
+        "identification.annotated": 36,
+        "identification.correct": 9,
+        "resolution.annotated": 35,
+        "resolution.top1_correct": 29,
+        "resolution.resolved": 9,
+        "resolution.resolved_correct": 9,
+        "resolution.resolved_unmatched": 0,
+        "none_exists.matched": 0,
+        "none_exists.wrongly_resolved": 0,
+        "failed": 1
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 135,
+  "review_queue": [],
+  "results": [
+    {
+      "id": "v-agent-skills",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-5febfa28",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "agent-skills",
+          "name_latin": "agent-skills",
+          "spellings": [],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "agent-skills 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "addyosmani/agent-skills",
+                "source": "github",
+                "score": 3,
+                "stars": 109954,
+                "evidence": [
+                  "github name match 3",
+                  "term 'agent-skills'"
+                ]
+              },
+              {
+                "identifier": "vercel-labs/agent-skills",
+                "source": "github",
+                "score": 3,
+                "stars": 32905,
+                "evidence": [
+                  "github name match 3",
+                  "term 'agent-skills'"
+                ]
+              },
+              {
+                "identifier": "tech-leads-club/agent-skills",
+                "source": "github",
+                "score": 3,
+                "stars": 7088,
+                "evidence": [
+                  "github name match 3",
+                  "term 'agent-skills'"
+                ]
+              }
+            ],
+            "term": "agent-skills"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-jadx-ai-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-7bf4766d",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "jadx-ai-mcp",
+          "name_latin": "jadx-ai-mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. jadx-ai-mcp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "zinja-coder/jadx-ai-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 2934,
+                "evidence": [
+                  "github name match 3",
+                  "term 'jadx-ai-mcp'"
+                ]
+              },
+              {
+                "identifier": "shark-hunt/jadx-ai-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 1,
+                "evidence": [
+                  "github name match 3",
+                  "term 'jadx-ai-mcp'"
+                ]
+              }
+            ],
+            "term": "jadx-ai-mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-yt-dlp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-aaeac013",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 15,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "yt-dlp",
+          "name_latin": "yt-dlp",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. yt-dlp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "yt-dlp/yt-dlp",
+                "source": "github",
+                "score": 4,
+                "stars": 201067,
+                "evidence": [
+                  "github name match 4",
+                  "term 'yt-dlp'"
+                ]
+              },
+              {
+                "identifier": "yt-dlp/yt-dlp-wiki",
+                "source": "github",
+                "score": 2,
+                "stars": 320,
+                "evidence": [
+                  "github name match 2",
+                  "term 'yt-dlp'"
+                ]
+              },
+              {
+                "identifier": "kannagi0303/yt-dlp-gui",
+                "source": "github",
+                "score": 1,
+                "stars": 2675,
+                "evidence": [
+                  "github name match 1",
+                  "term 'yt-dlp'"
+                ]
+              }
+            ],
+            "term": "yt-dlp"
+          },
+          "identifier": "yt-dlp/yt-dlp",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "yt-dlp/yt-dlp",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 201067,
+                  "forks_count": 17552,
+                  "open_issues_count": 2717,
+                  "created_at": "2020-10-26T04:22:55Z",
+                  "pushed_at": "2026-10-23T15:18:53Z",
+                  "description": "A feature-rich command-line audio/video downloader",
+                  "license": "Unlicense"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:05Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 11,
+                  "days": 2191,
+                  "all": {
+                    "spike_days": 202,
+                    "peak_count": 880,
+                    "peak_ratio": 24.608501118568235,
+                    "spike_star_share": 0.20047048993619043
+                  },
+                  "recent_12w": {
+                    "spike_days": 5,
+                    "peak_count": 547,
+                    "peak_ratio": 1.2261824702981394,
+                    "spike_star_share": 0.10413574750173148
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:12Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "dstftw",
+                  "top_share": 0.3312823668153617
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T04:17:13Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:14Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:14Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-awesome-design-md",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-ba34f82e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "awesome-design-md",
+          "name_latin": "awesome-design-md",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. awesome-design-md 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "VoltAgent/awesome-design-md",
+                "source": "github",
+                "score": 4,
+                "stars": 123186,
+                "evidence": [
+                  "github name match 3",
+                  "npm:awesome-design-md → VoltAgent/awesome-design-md",
+                  "term 'awesome-design-md'"
+                ]
+              },
+              {
+                "identifier": "HU-UH/awesome-design-md",
+                "source": "github",
+                "score": 3,
+                "stars": 455,
+                "evidence": [
+                  "github name match 3",
+                  "term 'awesome-design-md'"
+                ]
+              },
+              {
+                "identifier": "kzhrknt/awesome-design-md-jp",
+                "source": "github",
+                "score": 1,
+                "stars": 995,
+                "evidence": [
+                  "github name match 1",
+                  "term 'awesome-design-md'"
+                ]
+              }
+            ],
+            "term": "awesome-design-md"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-hwp-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-23473743",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "hwp-mcp",
+          "name_latin": "hwp-mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. hwp-mcp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "treesoop/hwp-mcp",
+                "source": "github",
+                "score": 4,
+                "stars": 99,
+                "evidence": [
+                  "github name match 3",
+                  "npm:hwp-mcp → treesoop/hwp-mcp",
+                  "term 'hwp-mcp'"
+                ]
+              },
+              {
+                "identifier": "jkf87/hwp-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 271,
+                "evidence": [
+                  "github name match 3",
+                  "term 'hwp-mcp'"
+                ]
+              },
+              {
+                "identifier": "crowwan/hwp-mcp-advanced-custom",
+                "source": "github",
+                "score": 1,
+                "stars": 6,
+                "evidence": [
+                  "github name match 1",
+                  "term 'hwp-mcp'"
+                ]
+              }
+            ],
+            "term": "hwp-mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-notebooklm-py",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-ed41ae58",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "notebooklm-py",
+          "name_latin": "notebooklm-py",
+          "spellings": [],
+          "kind": "pypi",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. notebooklm-py 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "teng-lin/notebooklm-py",
+                "source": "github",
+                "score": 3,
+                "stars": 19870,
+                "evidence": [
+                  "github name match 3",
+                  "term 'notebooklm-py'"
+                ]
+              },
+              {
+                "identifier": "wx-b/notebooklm-py",
+                "source": "github",
+                "score": 3,
+                "stars": 38,
+                "evidence": [
+                  "github name match 3",
+                  "term 'notebooklm-py'"
+                ]
+              },
+              {
+                "identifier": "patriarchal-boothose896/notebooklm-py",
+                "source": "github",
+                "score": 3,
+                "stars": 3,
+                "evidence": [
+                  "github name match 3",
+                  "term 'notebooklm-py'"
+                ]
+              }
+            ],
+            "term": "notebooklm-py"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-faster-whisper",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-74723872",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 11,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "faster-whisper",
+          "name_latin": "faster-whisper",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. faster-whisper 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "SYSTRAN/faster-whisper",
+                "source": "github",
+                "score": 3,
+                "stars": 26085,
+                "evidence": [
+                  "github name match 3",
+                  "term 'faster-whisper'"
+                ]
+              },
+              {
+                "identifier": "CheshireCC/faster-whisper-GUI",
+                "source": "github",
+                "score": 1,
+                "stars": 3005,
+                "evidence": [
+                  "github name match 1",
+                  "term 'faster-whisper'"
+                ]
+              },
+              {
+                "identifier": "TransWithAI/Faster-Whisper-TransWithAI-ChickenRice",
+                "source": "github",
+                "score": 1,
+                "stars": 2485,
+                "evidence": [
+                  "github name match 1",
+                  "term 'faster-whisper'"
+                ]
+              }
+            ],
+            "term": "faster-whisper"
+          },
+          "identifier": "SYSTRAN/faster-whisper",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "SYSTRAN/faster-whisper",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 26085,
+                  "forks_count": 2161,
+                  "open_issues_count": 20,
+                  "created_at": "2023-02-11T09:17:27Z",
+                  "pushed_at": "2026-10-23T19:31:56Z",
+                  "description": "Faster Whisper transcription with CTranslate2",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:27Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 7,
+                  "days": 1358,
+                  "all": {
+                    "spike_days": 42,
+                    "peak_count": 230,
+                    "peak_ratio": 8.418740849194728,
+                    "spike_star_share": 0.10132259919493962
+                  },
+                  "recent_12w": {
+                    "spike_days": 3,
+                    "peak_count": 36,
+                    "peak_ratio": 1.2648809523809523,
+                    "spike_star_share": 0.06440903054448871
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:31Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 51,
+                  "top_login": "guillaumekln",
+                  "top_share": 0.47619047619047616
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:32Z"
+              },
+              "releases": {
+                "value": 21,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:32Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:32Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-instagrapi",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-5d95be5e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "instagrapi",
+          "name_latin": "instagrapi",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. instagrapi 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "EdixonAlberto/instagrapi",
+                "source": "github",
+                "score": 4,
+                "stars": 12,
+                "evidence": [
+                  "github name match 3",
+                  "npm:instagrapi → EdixonAlberto/instagrapi",
+                  "term 'instagrapi'"
+                ]
+              },
+              {
+                "identifier": "subzeroid/instagrapi",
+                "source": "github",
+                "score": 3,
+                "stars": 7011,
+                "evidence": [
+                  "github name match 3",
+                  "term 'instagrapi'"
+                ]
+              },
+              {
+                "identifier": "Asdex1240/InstagrApi",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'instagrapi'"
+                ]
+              }
+            ],
+            "term": "instagrapi"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-summarize",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-750f41de",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "v-podcastfy",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-4f4b8452",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "podcastfy",
+          "name_latin": "podcastfy",
+          "spellings": [],
+          "kind": "product",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. podcastfy 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "no_repo_expected",
+            "candidates": []
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-socket-cli",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-df803b8a",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 13,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "socket-cli",
+          "name_latin": "socket-cli",
+          "spellings": [],
+          "kind": "npm",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. socket-cli 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "SocketDev/socket-cli",
+                "source": "github",
+                "score": 4,
+                "stars": 336,
+                "evidence": [
+                  "github name match 3",
+                  "npm:socket-cli → SocketDev/socket-cli",
+                  "term 'socket-cli'"
+                ]
+              },
+              {
+                "identifier": "socketio/socket.io-client",
+                "source": "github",
+                "score": 0,
+                "stars": 10584,
+                "evidence": [
+                  "github name match 0",
+                  "term 'socket-cli'"
+                ]
+              },
+              {
+                "identifier": "socketio/socket.io-client-java",
+                "source": "github",
+                "score": 0,
+                "stars": 5398,
+                "evidence": [
+                  "github name match 0",
+                  "term 'socket-cli'"
+                ]
+              }
+            ],
+            "term": "socket-cli"
+          },
+          "identifier": "SocketDev/socket-cli",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "0.0.1",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": false,
+                "repository": "SocketDev/socket-cli",
+                "repository_matches": true,
+                "maintainers": [
+                  "bret"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 20
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T04:17:40Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T04:17:40Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "SocketDev/socket-cli",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 336,
+                  "forks_count": 71,
+                  "open_issues_count": 25,
+                  "created_at": "2022-10-20T11:06:04Z",
+                  "pushed_at": "2026-10-23T17:31:58Z",
+                  "description": "Command-line interface for socket.dev security analysis",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:41Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 8,
+                  "days": 1470,
+                  "all": {
+                    "spike_days": 7,
+                    "peak_count": 9,
+                    "peak_ratio": 2.25,
+                    "spike_star_share": 0.125
+                  },
+                  "recent_12w": {
+                    "spike_days": 1,
+                    "peak_count": 5,
+                    "peak_ratio": 1.25,
+                    "spike_star_share": 0.14705882352941177
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:46Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 21,
+                  "top_login": "jdalton",
+                  "top_share": 0.8866352770735241
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:46Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:47Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:47Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-agent-scan",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-c106cb6a",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "agent-scan",
+          "name_latin": "agent-scan",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. agent-scan 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "snyk/agent-scan",
+                "source": "github",
+                "score": 3,
+                "stars": 3169,
+                "evidence": [
+                  "github name match 3",
+                  "term 'agent-scan'"
+                ]
+              },
+              {
+                "identifier": "7anX/AgentScan",
+                "source": "github",
+                "score": 3,
+                "stars": 109,
+                "evidence": [
+                  "github name match 3",
+                  "term 'agent-scan'"
+                ]
+              },
+              {
+                "identifier": "MatteoGabriele/agent-scan",
+                "source": "npm",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "npm:agent-scan → MatteoGabriele/agent-scan",
+                  "term 'agent-scan'"
+                ]
+              }
+            ],
+            "term": "agent-scan"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-scorecard",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-ff6f5e3a",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "scorecard",
+          "name_latin": "scorecard",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. scorecard 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "ossf/scorecard",
+                "source": "github",
+                "score": 3,
+                "stars": 5784,
+                "evidence": [
+                  "github name match 3",
+                  "term 'scorecard'"
+                ]
+              },
+              {
+                "identifier": "ShichenXie/scorecard",
+                "source": "github",
+                "score": 3,
+                "stars": 170,
+                "evidence": [
+                  "github name match 3",
+                  "term 'scorecard'"
+                ]
+              },
+              {
+                "identifier": "Labryant/ScoreCard",
+                "source": "github",
+                "score": 3,
+                "stars": 23,
+                "evidence": [
+                  "github name match 3",
+                  "term 'scorecard'"
+                ]
+              }
+            ],
+            "term": "scorecard"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-n8n",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-6ebc3c13",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 18,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "n8n",
+          "name_latin": "n8n",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. n8n 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "n8n-io/n8n",
+                "source": "github",
+                "score": 5,
+                "stars": 208434,
+                "evidence": [
+                  "github name match 4",
+                  "npm:n8n → n8n-io/n8n",
+                  "term 'n8n'"
+                ]
+              },
+              {
+                "identifier": "eleven-h/n8n",
+                "source": "github",
+                "score": 3,
+                "stars": 277,
+                "evidence": [
+                  "github name match 3",
+                  "term 'n8n'"
+                ]
+              },
+              {
+                "identifier": "render-examples/n8n",
+                "source": "github",
+                "score": 3,
+                "stars": 98,
+                "evidence": [
+                  "github name match 3",
+                  "term 'n8n'"
+                ]
+              }
+            ],
+            "term": "n8n"
+          },
+          "identifier": "n8n-io/n8n",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "2.44.6",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": true,
+                "repository": "n8n-io/n8n",
+                "repository_matches": true,
+                "maintainers": [
+                  "jan_n8n_io",
+                  "n8n-matsuuu",
+                  "cornelius_n8n_io",
+                  "tomin8n"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 427037
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T04:17:56Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": 6.7
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T04:17:57Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "n8n-io/n8n",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 208434,
+                  "forks_count": 61217,
+                  "open_issues_count": 1207,
+                  "created_at": "2019-06-22T09:24:21Z",
+                  "pushed_at": "2026-10-23T22:41:59Z",
+                  "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+                  "license": "NOASSERTION"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:17:57Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 13,
+                  "days": 2688,
+                  "all": {
+                    "spike_days": 185,
+                    "peak_count": 1122,
+                    "peak_ratio": 206.24999999999997,
+                    "spike_star_share": 0.13783259928802402
+                  },
+                  "recent_12w": {
+                    "spike_days": 4,
+                    "peak_count": 506,
+                    "peak_ratio": 2.662597347926752,
+                    "spike_star_share": 0.09734752796824252
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:05Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "janober",
+                  "top_share": 0.18930629930916076
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T04:18:05Z"
+              },
+              "releases": {
+                "value": "100+",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:06Z"
+              },
+              "fork_star": {
+                "value": "caution",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:06Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-ida-pro-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-c8b12e01",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "ida-pro-mcp",
+          "name_latin": "ida-pro-mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. ida-pro-mcp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "mrexodia/ida-pro-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 13124,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ida-pro-mcp'"
+                ]
+              },
+              {
+                "identifier": "GrecAndrei/ida-pro-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 15,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ida-pro-mcp'"
+                ]
+              },
+              {
+                "identifier": "xxipv6/IDA-PRO-MCP-multiple",
+                "source": "github",
+                "score": 1,
+                "stars": 53,
+                "evidence": [
+                  "github name match 1",
+                  "term 'ida-pro-mcp'"
+                ]
+              }
+            ],
+            "term": "ida-pro-mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-whisperx",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-1f663353",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "whisperX",
+          "name_latin": "whisperX",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. whisperX 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "m-bain/whisperX",
+                "source": "github",
+                "score": 3,
+                "stars": 24811,
+                "evidence": [
+                  "github name match 3",
+                  "term 'whisperx'"
+                ]
+              },
+              {
+                "identifier": "thomasvvugt/whisperx",
+                "source": "github",
+                "score": 3,
+                "stars": 13,
+                "evidence": [
+                  "github name match 3",
+                  "term 'whisperx'"
+                ]
+              },
+              {
+                "identifier": "jim60105/docker-whisperX",
+                "source": "github",
+                "score": 1,
+                "stars": 458,
+                "evidence": [
+                  "github name match 1",
+                  "term 'whisperx'"
+                ]
+              }
+            ],
+            "term": "whisperx"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-npq",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-11cd3d2e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "npq",
+          "name_latin": "npq",
+          "spellings": [],
+          "kind": "npm",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. npq 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "lirantal/npq",
+                "source": "github",
+                "score": 4,
+                "stars": 1795,
+                "evidence": [
+                  "github name match 3",
+                  "npm:npq → lirantal/npq",
+                  "term 'npq'"
+                ]
+              },
+              {
+                "identifier": "lmaeda/npq",
+                "source": "github",
+                "score": 3,
+                "stars": 1,
+                "evidence": [
+                  "github name match 3",
+                  "term 'npq'"
+                ]
+              },
+              {
+                "identifier": "zhaoyue-zephyrus/npq-vit",
+                "source": "github",
+                "score": 1,
+                "stars": 225,
+                "evidence": [
+                  "github name match 1",
+                  "term 'npq'"
+                ]
+              }
+            ],
+            "term": "npq"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-openfactverification",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-936c9c28",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "OpenFactVerification",
+          "name_latin": "OpenFactVerification",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. OpenFactVerification 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "Libr-AI/OpenFactVerification",
+                "source": "github",
+                "score": 3,
+                "stars": 1159,
+                "evidence": [
+                  "github name match 3",
+                  "term 'openfactverification'"
+                ]
+              },
+              {
+                "identifier": "VuNguyen2k/OpenFactVerification",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'openfactverification'"
+                ]
+              },
+              {
+                "identifier": "HRacheal/OpenFactVerification-main",
+                "source": "github",
+                "score": 1,
+                "stars": 0,
+                "evidence": [
+                  "github name match 1",
+                  "term 'openfactverification'"
+                ]
+              }
+            ],
+            "term": "openfactverification"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-ghidramcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-6368ba7f",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "GhidraMCP",
+          "name_latin": "GhidraMCP",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. GhidraMCP 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "LaurieWired/GhidraMCP",
+                "source": "github",
+                "score": 3,
+                "stars": 11505,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidramcp'"
+                ]
+              },
+              {
+                "identifier": "13bm/GhidraMCP",
+                "source": "github",
+                "score": 3,
+                "stars": 149,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidramcp'"
+                ]
+              },
+              {
+                "identifier": "themixednuts/GhidraMCP",
+                "source": "github",
+                "score": 3,
+                "stars": 92,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidramcp'"
+                ]
+              }
+            ],
+            "term": "ghidramcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-karakeep",
+      "group": "V-text",
+      "status": "failed",
+      "reason": "AttributeError(\"'str' object has no attribute 'get'\")"
+    },
+    {
+      "id": "v-vane",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-a84bdde8",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "Vane",
+          "name_latin": "Vane",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. Vane 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "ItzCrazyKns/Vane",
+                "source": "github",
+                "score": 3,
+                "stars": 37689,
+                "evidence": [
+                  "github name match 3",
+                  "term 'vane'"
+                ]
+              },
+              {
+                "identifier": "oddlama/vane",
+                "source": "github",
+                "score": 3,
+                "stars": 389,
+                "evidence": [
+                  "github name match 3",
+                  "term 'vane'"
+                ]
+              },
+              {
+                "identifier": "AstroVela/vane",
+                "source": "github",
+                "score": 3,
+                "stars": 140,
+                "evidence": [
+                  "github name match 3",
+                  "term 'vane'"
+                ]
+              }
+            ],
+            "term": "vane"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-instaloader",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-f87b8e68",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "instaloader",
+          "name_latin": "instaloader",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. instaloader 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "instaloader/instaloader",
+                "source": "github",
+                "score": 4,
+                "stars": 13661,
+                "evidence": [
+                  "github name match 4",
+                  "term 'instaloader'"
+                ]
+              },
+              {
+                "identifier": "favstats/instaloadeR",
+                "source": "github",
+                "score": 3,
+                "stars": 18,
+                "evidence": [
+                  "github name match 3",
+                  "term 'instaloader'"
+                ]
+              },
+              {
+                "identifier": "sitaratoon/Instaloader",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'instaloader'"
+                ]
+              }
+            ],
+            "term": "instaloader"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-starscout",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-2d16d9fa",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "StarScout",
+          "name_latin": "StarScout",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. StarScout 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "hehao98/StarScout",
+                "source": "github",
+                "score": 3,
+                "stars": 203,
+                "evidence": [
+                  "github name match 3",
+                  "term 'starscout'"
+                ]
+              },
+              {
+                "identifier": "itzlambda/starscout",
+                "source": "github",
+                "score": 3,
+                "stars": 7,
+                "evidence": [
+                  "github name match 3",
+                  "term 'starscout'"
+                ]
+              },
+              {
+                "identifier": "hidep-hub/StarScout",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'starscout'"
+                ]
+              }
+            ],
+            "term": "starscout"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-09326bec",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "mcp",
+          "name_latin": "mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. mcp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "BrowserMCP/mcp",
+                "source": "github",
+                "score": 4,
+                "stars": 7215,
+                "evidence": [
+                  "github name match 4",
+                  "term 'mcp'"
+                ]
+              },
+              {
+                "identifier": "awslabs/mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 9822,
+                "evidence": [
+                  "github name match 3",
+                  "term 'mcp'"
+                ]
+              },
+              {
+                "identifier": "google/mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 4660,
+                "evidence": [
+                  "github name match 3",
+                  "term 'mcp'"
+                ]
+              }
+            ],
+            "term": "mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-whisper-cpp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-1a80f8dc",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 14,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "whisper.cpp",
+          "name_latin": "whisper.cpp",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. whisper.cpp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "ggml-org/whisper.cpp",
+                "source": "github",
+                "score": 4,
+                "stars": 54606,
+                "evidence": [
+                  "github name match 3",
+                  "npm:whisper.cpp → ggml-org/whisper.cpp",
+                  "term 'whisper.cpp'"
+                ]
+              },
+              {
+                "identifier": "charliermarsh/whisper.cpp-cli",
+                "source": "github",
+                "score": 1,
+                "stars": 176,
+                "evidence": [
+                  "github name match 1",
+                  "term 'whisper.cpp'"
+                ]
+              },
+              {
+                "identifier": "lyledean1/flutter_whisper.cpp",
+                "source": "github",
+                "score": 1,
+                "stars": 170,
+                "evidence": [
+                  "github name match 1",
+                  "term 'whisper.cpp'"
+                ]
+              }
+            ],
+            "term": "whisper.cpp"
+          },
+          "identifier": "ggml-org/whisper.cpp",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "1.0.3",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": false,
+                "repository": "ggerganov/whisper.cpp",
+                "repository_matches": true,
+                "maintainers": [
+                  "ggerganov"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 1153
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T04:18:41Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T04:18:41Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "ggml-org/whisper.cpp",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 54606,
+                  "forks_count": 6236,
+                  "open_issues_count": 363,
+                  "created_at": "2022-09-25T18:26:37Z",
+                  "pushed_at": "2026-10-19T14:14:00Z",
+                  "description": "Port of OpenAI's Whisper model in C/C++",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:42Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 8,
+                  "days": 1491,
+                  "all": {
+                    "spike_days": 81,
+                    "peak_count": 683,
+                    "peak_ratio": 10.927390366642703,
+                    "spike_star_share": 0.20728491374574223
+                  },
+                  "recent_12w": {
+                    "spike_days": 0,
+                    "peak_count": 0,
+                    "peak_ratio": 0,
+                    "spike_star_share": 0.0
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:47Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 100,
+                  "top_login": "ggerganov",
+                  "top_share": 0.3522810441571115
+                },
+                "status": "ok",
+                "note": "first page only",
+                "fetched_at": "2026-10-24T04:18:47Z"
+              },
+              "releases": {
+                "value": 45,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:48Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:48Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-repoguard",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-07bc044a",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "repoguard",
+          "name_latin": "repoguard",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. repoguard 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "prezi/repoguard",
+                "source": "github",
+                "score": 3,
+                "stars": 48,
+                "evidence": [
+                  "github name match 3",
+                  "term 'repoguard'"
+                ]
+              },
+              {
+                "identifier": "taylormatematica-beep/repoguard",
+                "source": "github",
+                "score": 3,
+                "stars": 5,
+                "evidence": [
+                  "github name match 3",
+                  "term 'repoguard'"
+                ]
+              },
+              {
+                "identifier": "mpg-one/RepoGuard",
+                "source": "github",
+                "score": 3,
+                "stars": 3,
+                "evidence": [
+                  "github name match 3",
+                  "term 'repoguard'"
+                ]
+              }
+            ],
+            "term": "repoguard"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-daily-stars-explorer",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-4ba63ef8",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 10,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "daily-stars-explorer",
+          "name_latin": "daily-stars-explorer",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. daily-stars-explorer 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "emanuelef/daily-stars-explorer",
+                "source": "github",
+                "score": 3,
+                "stars": 412,
+                "evidence": [
+                  "github name match 3",
+                  "term 'daily-stars-explorer'"
+                ]
+              }
+            ],
+            "term": "daily-stars-explorer"
+          },
+          "identifier": "emanuelef/daily-stars-explorer",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "emanuelef/daily-stars-explorer",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 412,
+                  "forks_count": 16,
+                  "open_issues_count": 11,
+                  "created_at": "2023-09-22T16:01:55Z",
+                  "pushed_at": "2026-10-23T15:03:33Z",
+                  "description": "Gain deeper insights into your favourite open-source GitHub repositories. Explore star trends showing daily stats.",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:53Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 6,
+                  "days": 1134,
+                  "all": {
+                    "spike_days": 2,
+                    "peak_count": 21,
+                    "peak_ratio": 5.25,
+                    "spike_star_share": 0.07524271844660194
+                  },
+                  "recent_12w": {
+                    "spike_days": 0,
+                    "peak_count": 0,
+                    "peak_ratio": 0,
+                    "spike_star_share": 0.0
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:56Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 3,
+                  "top_login": "emanuelef",
+                  "top_share": 0.9301994301994302
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:57Z"
+              },
+              "releases": {
+                "value": 9,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:57Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:18:57Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-rhwp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-54b4275b",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 6,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "rhwp",
+          "name_latin": "rhwp",
+          "spellings": [],
+          "kind": "unknown",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. rhwp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "edwardkim/rhwp",
+                "source": "github",
+                "score": 3,
+                "stars": 3994,
+                "evidence": [
+                  "github name match 3",
+                  "term 'rhwp'"
+                ]
+              },
+              {
+                "identifier": "runableapp/rhwp-desktop",
+                "source": "github",
+                "score": 1,
+                "stars": 29,
+                "evidence": [
+                  "github name match 1",
+                  "term 'rhwp'"
+                ]
+              },
+              {
+                "identifier": "DanMeon/rhwp-python",
+                "source": "github",
+                "score": 1,
+                "stars": 16,
+                "evidence": [
+                  "github name match 1",
+                  "term 'rhwp'"
+                ]
+              }
+            ],
+            "term": "rhwp"
+          },
+          "identifier": "edwardkim/rhwp",
+          "measurements": {
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "edwardkim/rhwp",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 3994,
+                  "forks_count": 780,
+                  "open_issues_count": 372,
+                  "created_at": "2026-03-27T05:54:10Z",
+                  "pushed_at": "2026-10-24T04:07:16Z",
+                  "description": "아래한글 hwp viewer and editor by rust and wasm",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:01Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 2,
+                  "days": 217,
+                  "all": {
+                    "spike_days": 13,
+                    "peak_count": 347,
+                    "peak_ratio": 4.252450980392157,
+                    "spike_star_share": 0.28517776664997496
+                  },
+                  "recent_12w": {
+                    "spike_days": 3,
+                    "peak_count": 18,
+                    "peak_ratio": 2.132701421800948,
+                    "spike_star_share": 0.0970873786407767
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:02Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 75,
+                  "top_login": "edwardkim",
+                  "top_share": 0.35654457694491765
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:02Z"
+              },
+              "releases": {
+                "value": 26,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:03Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:03Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-dembrandt",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-e61fca39",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 7,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "dembrandt",
+          "name_latin": "dembrandt",
+          "spellings": [],
+          "kind": "unknown",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. dembrandt 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "dembrandt/dembrandt",
+                "source": "github",
+                "score": 5,
+                "stars": 3808,
+                "evidence": [
+                  "github name match 4",
+                  "npm:dembrandt → dembrandt/dembrandt",
+                  "term 'dembrandt'"
+                ]
+              },
+              {
+                "identifier": "dembrandt/dembrandt-skills",
+                "source": "github",
+                "score": 2,
+                "stars": 155,
+                "evidence": [
+                  "github name match 2",
+                  "term 'dembrandt'"
+                ]
+              },
+              {
+                "identifier": "dembrandt/awesome-sole-creator",
+                "source": "github",
+                "score": 1,
+                "stars": 3,
+                "evidence": [
+                  "github name match 1",
+                  "term 'dembrandt'"
+                ]
+              }
+            ],
+            "term": "dembrandt"
+          },
+          "identifier": "dembrandt/dembrandt",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "0.39.2",
+                "install_scripts": {},
+                "git_install_scripts": {
+                  "prepare": "npm run build"
+                },
+                "provenance": true,
+                "repository": "dembrandt/dembrandt",
+                "repository_matches": true,
+                "maintainers": [
+                  "thevangelist"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 17449
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T04:19:07Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T04:19:08Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "dembrandt/dembrandt",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 3808,
+                  "forks_count": 331,
+                  "open_issues_count": 2,
+                  "created_at": "2025-11-22T13:49:09Z",
+                  "pushed_at": "2026-10-22T12:57:14Z",
+                  "description": "Extract any website’s design system into tokens in seconds: logo, colors, typography, borders & more. One command.",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:08Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 2,
+                  "days": 343,
+                  "all": {
+                    "spike_days": 41,
+                    "peak_count": 164,
+                    "peak_ratio": 11.815561959654177,
+                    "spike_star_share": 0.3744747899159664
+                  },
+                  "recent_12w": {
+                    "spike_days": 8,
+                    "peak_count": 55,
+                    "peak_ratio": 2.881844380403458,
+                    "spike_star_share": 0.15149544863459039
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:09Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 6,
+                  "top_login": "thevangelist",
+                  "top_share": 0.9746192893401016
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:10Z"
+              },
+              "releases": {
+                "value": 71,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:11Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:11Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-guarddog",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-8a8eefec",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "guarddog",
+          "name_latin": "guarddog",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. guarddog 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "DataDog/guarddog",
+                "source": "github",
+                "score": 3,
+                "stars": 1231,
+                "evidence": [
+                  "github name match 3",
+                  "term 'guarddog'"
+                ]
+              },
+              {
+                "identifier": "keatontaylor/GuardDog",
+                "source": "github",
+                "score": 3,
+                "stars": 3,
+                "evidence": [
+                  "github name match 3",
+                  "term 'guarddog'"
+                ]
+              },
+              {
+                "identifier": "canton7/Guarddog",
+                "source": "github",
+                "score": 3,
+                "stars": 2,
+                "evidence": [
+                  "github name match 3",
+                  "term 'guarddog'"
+                ]
+              }
+            ],
+            "term": "guarddog"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-reverse-engineering-assistant",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-9b07f588",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "reverse-engineering-assistant",
+          "name_latin": "reverse-engineering-assistant",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. reverse-engineering-assistant 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "cyberkaida/reverse-engineering-assistant",
+                "source": "github",
+                "score": 3,
+                "stars": 879,
+                "evidence": [
+                  "github name match 3",
+                  "term 'reverse-engineering-assistant'"
+                ]
+              },
+              {
+                "identifier": "tobiasGuta/reverse-engineering-assistant",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'reverse-engineering-assistant'"
+                ]
+              },
+              {
+                "identifier": "uloaeth/reverse-engineering-assistant",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'reverse-engineering-assistant'"
+                ]
+              }
+            ],
+            "term": "reverse-engineering-assistant"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-skill-scanner",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-5cfdae44",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "skill-scanner",
+          "name_latin": "skill-scanner",
+          "spellings": [],
+          "kind": "skill",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. skill-scanner 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "cisco-ai-defense/skill-scanner",
+                "source": "github",
+                "score": 3,
+                "stars": 2624,
+                "evidence": [
+                  "github name match 3",
+                  "term 'skill-scanner'"
+                ]
+              },
+              {
+                "identifier": "Yuan-lab-LLM/skill-scanner",
+                "source": "github",
+                "score": 3,
+                "stars": 4,
+                "evidence": [
+                  "github name match 3",
+                  "term 'skill-scanner'"
+                ]
+              },
+              {
+                "identifier": "caidongyun/agent-security-skill-scanner",
+                "source": "github",
+                "score": 1,
+                "stars": 28,
+                "evidence": [
+                  "github name match 1",
+                  "term 'skill-scanner'"
+                ]
+              }
+            ],
+            "term": "skill-scanner"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-chrome-devtools-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-69501cf5",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "chrome-devtools-mcp",
+          "name_latin": "chrome-devtools-mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. chrome-devtools-mcp 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "ChromeDevTools/chrome-devtools-mcp",
+                "source": "github",
+                "score": 4,
+                "stars": 54053,
+                "evidence": [
+                  "github name match 3",
+                  "npm:chrome-devtools-mcp → ChromeDevTools/chrome-devtools-mcp",
+                  "term 'chrome-devtools-mcp'"
+                ]
+              },
+              {
+                "identifier": "benjaminr/chrome-devtools-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 312,
+                "evidence": [
+                  "github name match 3",
+                  "term 'chrome-devtools-mcp'"
+                ]
+              },
+              {
+                "identifier": "diegorafs/Chrome-DevTools-MCP",
+                "source": "github",
+                "score": 3,
+                "stars": 42,
+                "evidence": [
+                  "github name match 3",
+                  "term 'chrome-devtools-mcp'"
+                ]
+              }
+            ],
+            "term": "chrome-devtools-mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-chatwoot",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-89bb42d7",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "chatwoot",
+          "name_latin": "Chatwoot",
+          "spellings": [],
+          "kind": "repo",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. chatwoot 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "chatwoot/chatwoot",
+                "source": "github",
+                "score": 4,
+                "stars": 38153,
+                "evidence": [
+                  "github name match 4",
+                  "term 'chatwoot'"
+                ]
+              },
+              {
+                "identifier": "comunidadehubconnect/chatwoot",
+                "source": "github",
+                "score": 3,
+                "stars": 27,
+                "evidence": [
+                  "github name match 3",
+                  "term 'chatwoot'"
+                ]
+              },
+              {
+                "identifier": "railwayapp-templates/chatwoot",
+                "source": "github",
+                "score": 3,
+                "stars": 11,
+                "evidence": [
+                  "github name match 3",
+                  "term 'chatwoot'"
+                ]
+              }
+            ],
+            "term": "chatwoot"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-better-icons",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-04ac95cb",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 7,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "better-icons",
+          "name_latin": "better-icons",
+          "spellings": [],
+          "kind": "plugin",
+          "role": "primary",
+          "evidence_quote": "better-icons 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "resolved",
+            "candidates": [
+              {
+                "identifier": "better-auth/better-icons",
+                "source": "github",
+                "score": 4,
+                "stars": 1435,
+                "evidence": [
+                  "github name match 3",
+                  "npm:better-icons → better-auth/better-icons",
+                  "term 'better-icons'"
+                ]
+              },
+              {
+                "identifier": "nexaknight/BetterTrayIcons",
+                "source": "github",
+                "score": 0,
+                "stars": 83,
+                "evidence": [
+                  "github name match 0",
+                  "term 'better-icons'"
+                ]
+              },
+              {
+                "identifier": "chsiao58/EvenBetterArtisanGoodIcons",
+                "source": "github",
+                "score": 0,
+                "stars": 45,
+                "evidence": [
+                  "github name match 0",
+                  "term 'better-icons'"
+                ]
+              }
+            ],
+            "term": "better-icons"
+          },
+          "identifier": "better-auth/better-icons",
+          "measurements": {
+            "npm": {
+              "value": {
+                "version": "1.0.4",
+                "install_scripts": {},
+                "git_install_scripts": {},
+                "provenance": true,
+                "repository": "better-auth/better-icons",
+                "repository_matches": true,
+                "maintainers": [
+                  "bekacru"
+                ],
+                "maintainer_is_owner": false,
+                "downloads_last_month": 2394
+              },
+              "status": "ok",
+              "note": "npx 실행·미러 수집도 집계되므로 사용자 수가 아니다",
+              "fetched_at": "2026-10-24T04:19:27Z"
+            },
+            "depsdev": {
+              "value": {
+                "advisories": [],
+                "scorecard": null
+              },
+              "status": "ok",
+              "note": "",
+              "fetched_at": "2026-10-24T04:19:28Z"
+            },
+            "github": {
+              "meta": {
+                "value": {
+                  "full_name": "better-auth/better-icons",
+                  "fork": false,
+                  "archived": false,
+                  "stargazers_count": 1435,
+                  "forks_count": 62,
+                  "open_issues_count": 2,
+                  "created_at": "2026-01-22T01:21:49Z",
+                  "pushed_at": "2026-04-02T15:54:17Z",
+                  "description": "Skill and MCP server for searching and retrieving icons",
+                  "license": "MIT"
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:28Z"
+              },
+              "star_history": {
+                "value": {
+                  "pages": 2,
+                  "days": 280,
+                  "all": {
+                    "spike_days": 17,
+                    "peak_count": 150,
+                    "peak_ratio": 27.573529411764703,
+                    "spike_star_share": 0.329616724738676
+                  },
+                  "recent_12w": {
+                    "spike_days": 7,
+                    "peak_count": 12,
+                    "peak_ratio": 2.205882352941176,
+                    "spike_star_share": 0.27074235807860264
+                  }
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:29Z"
+              },
+              "contributors": {
+                "value": {
+                  "count": 7,
+                  "top_login": "Bekacru",
+                  "top_share": 0.7666666666666667
+                },
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:30Z"
+              },
+              "releases": {
+                "value": 5,
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:31Z"
+              },
+              "fork_star": {
+                "value": "normal",
+                "status": "ok",
+                "note": "",
+                "fetched_at": "2026-10-24T04:19:31Z"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-ghidra-mcp",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-e2fcd5be",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "ghidra-mcp",
+          "name_latin": "ghidra-mcp",
+          "spellings": [],
+          "kind": "mcp",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. ghidra-mcp 꼭 한번 써보세요. 설치 방법은 댓글로 알려드릴게요",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "LaurieWired/GhidraMCP",
+                "source": "github",
+                "score": 3,
+                "stars": 11505,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidra-mcp'"
+                ]
+              },
+              {
+                "identifier": "bethington/ghidra-mcp",
+                "source": "github",
+                "score": 3,
+                "stars": 5883,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidra-mcp'"
+                ]
+              },
+              {
+                "identifier": "13bm/GhidraMCP",
+                "source": "github",
+                "score": 3,
+                "stars": 149,
+                "evidence": [
+                  "github name match 3",
+                  "term 'ghidra-mcp'"
+                ]
+              }
+            ],
+            "term": "ghidra-mcp"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-python-hwpx",
+      "group": "V-text",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-11a7764c",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "found_strict": 0,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "identification": {
+          "annotated": 1,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 1,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": [
+        {
+          "name": "python-hwpx",
+          "name_latin": "python-hwpx",
+          "spellings": [],
+          "kind": "pypi",
+          "role": "primary",
+          "evidence_quote": "요즘 개발자들 사이에서 이거 진짜 많이 써요. python-hwpx 꼭 한번 써보세요.",
+          "origin": "caption",
+          "resolution": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "identifier": "airmang/python-hwpx",
+                "source": "github",
+                "score": 3,
+                "stars": 117,
+                "evidence": [
+                  "github name match 3",
+                  "term 'python-hwpx'"
+                ]
+              },
+              {
+                "identifier": "ratiertm/python-hwpx",
+                "source": "github",
+                "score": 3,
+                "stars": 0,
+                "evidence": [
+                  "github name match 3",
+                  "term 'python-hwpx'"
+                ]
+              },
+              {
+                "identifier": "airmang/python-hwpx-automation",
+                "source": "github",
+                "score": 1,
+                "stars": 68,
+                "evidence": [
+                  "github name match 1",
+                  "term 'python-hwpx'"
+                ]
+              }
+            ],
+            "term": "python-hwpx"
+          },
+          "identifier": null,
+          "measurements": {}
+        }
+      ]
+    },
+    {
+      "id": "v-control-1",
+      "group": "V-control",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-0f7b4c46",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "v-control-2",
+      "group": "V-control",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-1225f6fd",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "v-control-3",
+      "group": "V-control",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-83bf07b6",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    },
+    {
+      "id": "v-control-4",
+      "group": "V-control",
+      "status": "scored",
+      "bundle": "out/20261024-041657-pasted-d489ba1a",
+      "score": {
+        "extraction": {
+          "gold_primary": 0,
+          "found": 0,
+          "found_strict": 0,
+          "predicted_primary": 0,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "identification": {
+          "annotated": 0,
+          "correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "none_exists": {
+          "matched": 0,
+          "wrongly_resolved": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 0,
+      "evidence": "not_run",
+      "extraction": "ok",
+      "degraded": false,
+      "interventions": [],
+      "versions": {
+        "watch": "0.3.2",
+        "llm_model": "qwen/qwen3-coder-30b",
+        "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+      },
+      "entities_at_run": []
+    }
+  ]
+}

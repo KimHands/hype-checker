@@ -1,0 +1,231 @@
+{
+  "ran_at": "2026-10-24T03:35:24Z",
+  "groups": [
+    "A-reel"
+  ],
+  "allow_download": false,
+  "summary": {
+    "A-reel": {
+      "cases": 6,
+      "skipped": 0,
+      "failed": 0,
+      "url_normalization": null,
+      "extraction_recall": 0.455,
+      "extraction_precision": 0.417,
+      "resolution_top1": 1.0,
+      "resolved_precision": 1.0,
+      "resolved_unmatched": 0,
+      "counts": {
+        "cases": 6,
+        "extraction.gold_primary": 11,
+        "extraction.found": 5,
+        "extraction.predicted_primary": 12,
+        "extraction.predicted_primary_matched": 5,
+        "extraction.role_correct": 5,
+        "resolution.annotated": 2,
+        "resolution.top1_correct": 2,
+        "resolution.resolved": 2,
+        "resolution.resolved_correct": 2,
+        "resolution.resolved_unmatched": 0
+      }
+    }
+  },
+  "invariant_violations": [],
+  "process_calls": 36,
+  "review_queue": [
+    {
+      "gold": "InspoAI",
+      "top": "Nutlope/inspo",
+      "status": "ambiguous",
+      "case": "2026-10-01-design-ref-mcp5"
+    },
+    {
+      "gold": "graphify",
+      "top": "Graphify-Labs/graphify",
+      "status": "ambiguous",
+      "case": "2026-08-23-graphify"
+    },
+    {
+      "gold": "Claude Figma 커넥터",
+      "top": "arnemolland/figma",
+      "status": "ambiguous",
+      "case": "2026-08-23-figma-connector-ppt"
+    }
+  ],
+  "results": [
+    {
+      "id": "2026-10-01-liner-search-mcp",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-68baa21e",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 2,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-10-01-ruflo",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-fdd9bf8f",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 1,
+          "top1_correct": 1,
+          "resolved": 1,
+          "resolved_correct": 1,
+          "resolved_unmatched": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 9,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-10-01-design-ref-mcp5",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-ed28f7f3",
+      "score": {
+        "extraction": {
+          "gold_primary": 5,
+          "found": 1,
+          "predicted_primary": 5,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "review_queue": [
+          {
+            "gold": "InspoAI",
+            "top": "Nutlope/inspo",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 5,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-graphify",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-d7deb114",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "review_queue": [
+          {
+            "gold": "graphify",
+            "top": "Graphify-Labs/graphify",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 4,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-ui-ai-tell-3tips",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-f9d128ce",
+      "score": {
+        "extraction": {
+          "gold_primary": 2,
+          "found": 0,
+          "predicted_primary": 3,
+          "predicted_primary_matched": 0,
+          "role_correct": 0
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "review_queue": []
+      },
+      "gh_calls": 7,
+      "evidence": "ok",
+      "extraction": "ok"
+    },
+    {
+      "id": "2026-08-23-figma-connector-ppt",
+      "group": "A-reel",
+      "status": "scored",
+      "bundle": "out/20261024-033404-local-02eca885",
+      "score": {
+        "extraction": {
+          "gold_primary": 1,
+          "found": 1,
+          "predicted_primary": 1,
+          "predicted_primary_matched": 1,
+          "role_correct": 1
+        },
+        "resolution": {
+          "annotated": 0,
+          "top1_correct": 0,
+          "resolved": 0,
+          "resolved_correct": 0,
+          "resolved_unmatched": 0
+        },
+        "review_queue": [
+          {
+            "gold": "Claude Figma 커넥터",
+            "top": "arnemolland/figma",
+            "status": "ambiguous"
+          }
+        ]
+      },
+      "gh_calls": 3,
+      "evidence": "ok",
+      "extraction": "ok"
+    }
+  ]
+}
