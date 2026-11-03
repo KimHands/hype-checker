@@ -116,3 +116,51 @@ class ExtractEntitiesTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ClaimsTest(unittest.TestCase):
+    CAPTION = "루플로는   월 10달러 무료\n플랜이 있고 속도가 3배 빠릅니다"
+
+    def run_extract(self, claims, transcript="", chat_replies=None):
+        entity = {**RUFLO, "claims": claims}
+        replies = chat_replies or [reply([entity])]
+        calls = iter(replies)
+        return extract_entities(transcript, self.CAPTION, "제목", chat=lambda messages: next(calls))
+
+    def test_claims_kept_only_if_verbatim_in_text(self):
+        result = self.run_extract(["속도가 3배 빠릅니다", "서버 없이 동작합니다", "월 10달러 무료 플랜이 있고"])
+        self.assertEqual(result.entities[0]["claims"], ["속도가 3배 빠릅니다", "월 10달러 무료 플랜이 있고"])
+
+    def test_more_than_three_claims_truncated(self):
+        text = "a1 b2 c3 d4 e5"
+        entity = {**RUFLO, "claims": ["a1", "b2", "c3", "d4"]}
+        result = extract_entities("", text, "", chat=lambda messages: reply([entity]))
+        self.assertEqual(result.entities[0]["claims"], ["a1", "b2", "c3"])
+
+    def test_missing_claims_defaults_empty(self):
+        self.assertEqual(parse_candidates(reply([RUFLO]))[0]["claims"], [])
+        self.assertEqual(self.run_extract([]).entities[0]["claims"], [])
+
+    def test_non_string_claim_dropped_without_rejecting_entity(self):
+        result = self.run_extract([5, None, {"x": 1}, "속도가 3배 빠릅니다"])
+        self.assertEqual(result.status, "ok")
+        self.assertEqual(result.entities[0]["claims"], ["속도가 3배 빠릅니다"])
+        self.assertEqual(parse_candidates(reply([{**RUFLO, "claims": "str"}]))[0]["claims"], [])
+
+    def test_claim_over_200_chars_dropped_not_truncated(self):
+        long_claim = "가" * 201
+        entity = {**RUFLO, "claims": [long_claim]}
+        result = extract_entities("", long_claim, "", chat=lambda messages: reply([entity]))
+        self.assertEqual(result.entities[0]["claims"], [])
+
+    def test_chunk_merge_unions_claims(self):
+        line = "x" * 5000 + "\n"
+        transcript = "첫째 주장입니다\n" + line + line + "둘째 주장입니다\n"
+        first = reply([{**RUFLO, "claims": ["첫째 주장입니다"]}])
+        second = reply([{**RUFLO, "claims": ["첫째 주장입니다", "둘째 주장입니다"]}])
+        result = self.run_extract([], transcript=transcript, chat_replies=[first, second])
+        self.assertGreater(result.chunks, 1)
+        self.assertEqual(result.entities[0]["claims"], ["첫째 주장입니다", "둘째 주장입니다"])
+
+    def test_prompt_asks_for_claims(self):
+        self.assertIn("claims", build_messages("", "", "")[0]["content"])

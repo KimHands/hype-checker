@@ -7,9 +7,11 @@ the two can never disagree about what the file says.
 """
 
 import importlib.util
+import os
 from pathlib import Path
 
-WATCH_SCRIPTS = Path.home() / ".claude/plugins/cache/claude-video/watch/0.3.2/skills/watch/scripts"
+WATCH_SCRIPTS = Path(os.environ.get("HC_WATCH_SCRIPT") or
+                     Path.home() / ".claude/plugins/cache/claude-video/watch/0.3.2/skills/watch/scripts/watch.py").parent
 COOKIE_SETTINGS = ("WATCH_COOKIES_FILE", "WATCH_COOKIES_FROM_BROWSER")
 YTDLP_CONFIGS = (".config/yt-dlp/config", ".config/yt-dlp.conf", "yt-dlp.conf", ".yt-dlp/config")
 

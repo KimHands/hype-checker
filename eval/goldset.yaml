@@ -19,7 +19,7 @@
 #                          | unannotated (카드에 기록 안 됨, 분모 제외 → 사람 검토 큐)
 #                          | none_exists (레포 없는 제품·기능, unresolved/product로 내면 정답)
 #                          | unverifiable (공개 경로로 확인할 수 없음 — 식별자를 확정하면 오답.
-#                            2026-10-24 김종건 결정: Nicelydone은 MCP registry에 없어 '확인 못함'이 정답)
+#                            2026-10-24 운영자 결정: Nicelydone은 MCP registry에 없어 '확인 못함'이 정답)
 #   verdict.a           편입 | 보류 | 버림
 #   verdict.b           채택 | 이미보유 | 후보 | 불필요
 #   key_findings[].mark ✅ | ❌ | ⚠️ | ❓ | ⛔
@@ -81,7 +81,7 @@ cases:
       sha1: b263bc96da33008ea9205a0596a456fa14f73e77
       duration_s: 80.5
       platform: instagram
-      account: null   # 공개본에서 계정명 익명화
+      account: gymcoding   # 짐코딩, 영상 말미 DM 화면
       cta: follow_comment_dm
     expected:
       entities:
@@ -99,7 +99,7 @@ cases:
         b: 불필요
         b_lane: null
         b_raw: 불필요 (설치 금지 권고)
-      funnel: 강의 판매 퍼널의 리드 수집 단계(공개본에서 링크 생략)
+      funnel: 강의 판매 퍼널의 리드 수집 단계(인프런·gymcoding.co)
       key_findings:
         - {mark: ❌, text: "MCP 도구 314개 주장 — 외부 감사상 실동작 ~10개(3%)"}
         - {mark: ❌, text: "벤치마크가 Math.random() 생성값 (#1748)"}
@@ -121,7 +121,7 @@ cases:
       sha1: 32df292e253d52975d28d115fdcaf9f6e5d12094
       duration_s: 35.5
       platform: instagram
-      account: null   # 공개본에서 계정명 익명화
+      account: every._ai
       cta: follow_comment_dm
     expected:
       entities:
@@ -403,7 +403,7 @@ cases:
         a_folder: 02_학습로드맵
         b: 후보
         b_lane: null
-        b_raw: 후보(도입 보류) — 김종건 결정 도입 안 함
+        b_raw: 후보(도입 보류) — 운영자 결정 도입 안 함
       funnel: null
       key_findings:
         - {mark: ✅, text: "★58k·생성 2023-07·코어 MIT — 성숙"}
@@ -453,13 +453,13 @@ cases:
 
   - id: 2026-08-31-buzz
     group: C-youtube
-    card: '[2026-08-31] 오픈소스 Slack "Buzz" (AI×휴먼 협업) — [크리에이터] ★편입'
+    card: '[2026-08-31] 오픈소스 Slack "Buzz" (AI×휴먼 협업) — 코드팩토리 ★편입'
     as_of: 2026-08-31
     input:
       type: url
       url: https://youtu.be/m3JEiSQcagg
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: 코드팩토리
       duration_s: 1259
       cta: unknown
     expected:
@@ -484,13 +484,13 @@ cases:
 
   - id: 2026-09-03-aside
     group: C-youtube
-    card: '[2026-09-03] Aside — 기존 AI 구독으로 쓰는 AI 브라우저 — [크리에이터]'
+    card: '[2026-09-03] Aside — 기존 AI 구독으로 쓰는 AI 브라우저 (시리얼 Sireal)'
     as_of: 2026-09-03
     input:
       type: url
       url: https://youtu.be/LInY2HD_ASs
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: 시리얼 Sireal
       duration_s: 853
       cta: unknown
     expected:
@@ -519,13 +519,13 @@ cases:
 
   - id: 2026-08-31-claude-design
     group: C-youtube
-    card: '[2026-08-31] 클로드 /design 스킬 업데이트 — [크리에이터]'
+    card: '[2026-08-31] 클로드 /design 스킬 업데이트 — 코드팩토리'
     as_of: 2026-08-31
     input:
       type: url
       url: https://youtu.be/QWMIQFJye-A
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: 코드팩토리
       duration_s: 506
       cta: unknown
     expected:
@@ -552,13 +552,13 @@ cases:
 
   - id: 2026-08-31-grok-bot-review
     group: C-youtube
-    card: '[2026-08-31] Grok Bot 리뷰 (Hermes·OpenClaw 대체) — [크리에이터]'
+    card: '[2026-08-31] Grok Bot 리뷰 (Hermes·OpenClaw 대체) — 코드팩토리'
     as_of: 2026-08-31
     input:
       type: url
       url: https://youtu.be/MzObKXUaSbc
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: 코드팩토리
       duration_s: 1297
       cta: unknown
     expected:
@@ -583,13 +583,13 @@ cases:
 
   - id: 2026-09-19-dontouch-temu
     group: D-control
-    card: '[2026-09-19] "22살 테무 식품 위탁판매 70억" — [크리에이터]'
+    card: '[2026-09-19] "22살 테무 식품 위탁판매 70억" — 돈터치 ★구라(강의 판매 퍼널)'
     as_of: 2026-09-19
     input:
       type: url
       url: https://youtu.be/O-DYrhUETCo
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: 돈터치
       duration_s: 1465
       cta: none   # 설명란 링크 + 단톡방 유입
     expected:
@@ -600,7 +600,7 @@ cases:
         b: 불필요
         b_lane: null
         b_raw: 불필요 — 도구 아님, 강의 상품
-      funnel: 유료 강의 리드 퍼널(공개본에서 링크 생략)
+      funnel: 유료 강의 리드 퍼널(hyperschool.co.kr ?ch=DT-17 제휴 파라미터)
       key_findings:
         - {mark: ❌, text: "'전국 10명 미만' 거짓 — 국내 셀러 3,500여 곳"}
       forbidden_actions:
@@ -610,13 +610,13 @@ cases:
 
   - id: 2026-09-24-atlassian-layoff
     group: D-control
-    card: '[2026-09-24] "I was laid off by Atlassian" — [크리에이터] ★편입'
+    card: '[2026-09-24] "I was laid off by Atlassian" — Vasilios Syrakis ★편입'
     as_of: 2026-09-24
     input:
       type: url
       url: https://www.youtube.com/watch?v=55pTFVoclvE
       platform: youtube
-      account: null   # 공개본에서 계정명 익명화
+      account: Vasilios Syrakis
       duration_s: 2406
       cta: none
     expected:

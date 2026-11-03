@@ -64,3 +64,16 @@ def classify(raw):
     if _looks_like_url(text):
         return _classify_url(text if "://" in text else f"https://{text}")
     return Source("text", "pasted", text)
+
+
+REMOTE_SAFE_PLATFORMS = {"github", "npm", "pypi"}
+
+
+def classify_remote(raw):
+    """Input from outside (v2 DM): never a local file or a download, only read-only registry links."""
+    text = raw.strip()
+    if _looks_like_url(text) and not text.lower().endswith(".mp4"):
+        source = _classify_url(text if "://" in text else f"https://{text}")
+        if source.platform in REMOTE_SAFE_PLATFORMS:
+            return source
+    return Source("text", "pasted", text)

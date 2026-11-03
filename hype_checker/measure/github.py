@@ -11,7 +11,7 @@ LIST_PAGE = 100
 
 def _meta(repo_json):
     keys = ("full_name", "fork", "archived", "stargazers_count", "forks_count", "open_issues_count",
-            "created_at", "pushed_at", "description")
+            "created_at", "pushed_at", "description", "topics")
     meta = {key: repo_json.get(key) for key in keys}
     meta["license"] = (repo_json.get("license") or {}).get("spdx_id")
     return meta

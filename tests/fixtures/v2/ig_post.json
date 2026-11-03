@@ -1,0 +1,6 @@
+{"object": "instagram", "entry": [{"time": 1761440000000, "id": "17841400000000001", "messaging": [{
+  "sender": {"id": "900000000000001"}, "recipient": {"id": "17841400000000001"}, "timestamp": 1761440000000,
+  "message": {"mid": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQx", "attachments": [{"type": "ig_post", "payload": {
+    "ig_post_media_id": "18139494541428835",
+    "title": "Build a workspace with Ruflo. 설치는 npx ruflo init 하세요",
+    "url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=18139494541428835&signature=SIG"}}]}}]}]}

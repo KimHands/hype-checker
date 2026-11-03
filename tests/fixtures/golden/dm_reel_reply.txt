@@ -1,0 +1,14 @@
+🔎 Hyper Checker 측정 결과
+게시물에서 소개하는 도구 5개의 공개 위치를 찾아봤어요.
+※ 판정 전 자료예요. 이름은 게시물 표기 그대로이고, 좋다·나쁘다는 평가가 아니에요.
+
+1. “Mobbin” · MCP 서버
+   🔗 api.mobbin.com/mcp
+2. “Nicelydone” · MCP 서버
+   🔗 mcp.nicelydone.club/mcp
+3. “Refero” · MCP 서버
+   🔗 api.refero.design/mcp
+4. “Lazyweb” · MCP 서버
+   🔀 후보가 여러 개라 아직 못 정함
+5. “InspoAI” · MCP 서버
+   🔗 app.inspoai.io/mcp

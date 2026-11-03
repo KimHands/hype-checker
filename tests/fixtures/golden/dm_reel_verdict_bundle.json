@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "id": "20261101-022600-pasted-4b183160",
+  "created_at": 1793499960.48871,
+  "source": {
+    "kind": "text",
+    "platform": "pasted",
+    "value": "클로드로 화면 만들고 있다면, 이 MCP들부터 연결해 보세요.\n\n클로드가 만든 화면이 어딘가 뻔하다면, 참고할 실제 화면 없이 만들어서일 때가 많아요. 디자인 레퍼런스 MCP를 붙이면 클로드가 먼저 찾아보고 만들어요.\n\n1. Mobbin · 출시된 앱 화면 62만 장 넘게. 화면, 흐름, 웹 섹션을 찾아 와요 (Pro 플랜부터)\n2. Nicelydone · 잘 만든 서비스의 화면, 흐름, 부품을 찾아서 그대로 참고해요 (유료 플랜)\n3. Refero · 그리기 전에 실제 화면부터 조사하고 설계를 잡아요 (유료 플랜)\n4. Lazyweb · 실제 화면이랑 공개된 A/B 실험을 근거로 고칠 곳을 짚어요 (설치 무료, 전체 리포트는 Pro)\n5. InspoAI · 웹사이트 화면과 아이콘을 찾고, 사이트 주소 하나로 브랜드 색과 글꼴을 뽑아요 (무료 월 15회)\n\n유료 플랜 없이 바로 써 보려면 Lazyweb이나 InspoAI부터 붙이면 돼요.\n\n다섯 개 연결 명령어 원문이랑 바로 쓰는 요청문까지 정리한 PDF는 댓글에 '화면' 남기면 DM 으로 보내드려요.\n팔로우해야 DM 이 갑니다. 저장해 두고 화면 만들 때 꺼내 보세요.\n\n#클로드코드 #ClaudeCode #MCP #디자인레퍼런스 #UIUX #웹디자인 #바이브코딩"
+  },
+  "evidence": {
+    "status": "not_run",
+    "frames": []
+  },
+  "extraction": {
+    "status": "ok",
+    "attempts": 1,
+    "chunks": 1,
+    "error": "",
+    "model": "qwen/qwen3-coder-30b"
+  },
+  "text": {
+    "title": "",
+    "caption": "클로드로 화면 만들고 있다면, 이 MCP들부터 연결해 보세요.\n\n클로드가 만든 화면이 어딘가 뻔하다면, 참고할 실제 화면 없이 만들어서일 때가 많아요. 디자인 레퍼런스 MCP를 붙이면 클로드가 먼저 찾아보고 만들어요.\n\n1. Mobbin · 출시된 앱 화면 62만 장 넘게. 화면, 흐름, 웹 섹션을 찾아 와요 (Pro 플랜부터)\n2. Nicelydone · 잘 만든 서비스의 화면, 흐름, 부품을 찾아서 그대로 참고해요 (유료 플랜)\n3. Refero · 그리기 전에 실제 화면부터 조사하고 설계를 잡아요 (유료 플랜)\n4. Lazyweb · 실제 화면이랑 공개된 A/B 실험을 근거로 고칠 곳을 짚어요 (설치 무료, 전체 리포트는 Pro)\n5. InspoAI · 웹사이트 화면과 아이콘을 찾고, 사이트 주소 하나로 브랜드 색과 글꼴을 뽑아요 (무료 월 15회)\n\n유료 플랜 없이 바로 써 보려면 Lazyweb이나 InspoAI부터 붙이면 돼요.\n\n다섯 개 연결 명령어 원문이랑 바로 쓰는 요청문까지 정리한 PDF는 댓글에 '화면' 남기면 DM 으로 보내드려요.\n팔로우해야 DM 이 갑니다. 저장해 두고 화면 만들 때 꺼내 보세요.\n\n#클로드코드 #ClaudeCode #MCP #디자인레퍼런스 #UIUX #웹디자인 #바이브코딩",
+    "transcript": ""
+  },
+  "notes": [],
+  "entities": [
+    {
+      "name": "Mobbin",
+      "name_latin": "Mobbin",
+      "spellings": [],
+      "kind": "mcp",
+      "role": "primary",
+      "evidence_quote": "1. Mobbin · 출시된 앱 화면 62만 장 넘게. 화면, 흐름, 웹 섹션을 찾아 와요 (Pro 플랜부터)",
+      "origin": "caption",
+      "resolution": {
+        "status": "resolved",
+        "candidates": [
+          {
+            "identifier": "https://api.mobbin.com/mcp",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry com.mobbin/mobbin",
+              "registry namespace com.mobbin (domain verified)",
+              "term 'mobbin'"
+            ],
+            "official": {
+              "description": "Mobbin MCP lets your agent search over 620,000 screens and flows from released apps. Available on Pro plans.",
+              "website": null,
+              "repository": null
+            }
+          },
+          {
+            "identifier": "mickasmt/next-mobbin-clone",
+            "source": "github",
+            "score": 1,
+            "stars": 128,
+            "created_at": "2023-12-24T05:55:40Z",
+            "evidence": [
+              "github name match 1",
+              "term 'mobbin'"
+            ]
+          },
+          {
+            "identifier": "A2coffee/Mobbin-Viewer",
+            "source": "github",
+            "score": 1,
+            "stars": 38,
+            "created_at": "2026-03-12T21:09:54Z",
+            "evidence": [
+              "github name match 1",
+              "term 'mobbin'"
+            ]
+          }
+        ],
+        "term": "mobbin"
+      },
+      "identifier": "https://api.mobbin.com/mcp",
+      "measurements": {},
+      "claims": [
+        "출시된 앱 화면 62만 장 넘게"
+      ]
+    },
+    {
+      "name": "Nicelydone",
+      "name_latin": "Nicelydone",
+      "spellings": [],
+      "kind": "mcp",
+      "role": "primary",
+      "evidence_quote": "2. Nicelydone · 잘 만든 서비스의 화면, 흐름, 부품을 찾아서 그대로 참고해요 (유료 플랜)",
+      "origin": "caption",
+      "resolution": {
+        "status": "resolved",
+        "candidates": [
+          {
+            "identifier": "https://mcp.nicelydone.club/mcp",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry io.github.nicelydoneapp/nicelydone",
+              "registry namespace io.github.nicelydoneapp (GitHub verified)",
+              "term 'nicelydone'"
+            ]
+          },
+          {
+            "identifier": "FilipMichalek/NicelyDone",
+            "source": "github",
+            "score": 3,
+            "stars": 0,
+            "created_at": "2022-10-03T13:19:30Z",
+            "evidence": [
+              "github name match 3",
+              "term 'nicelydone'"
+            ]
+          },
+          {
+            "identifier": "Nicelydone-club/nicelydone-ops-console",
+            "source": "github",
+            "score": 2,
+            "stars": 0,
+            "created_at": "2026-10-03T21:40:52Z",
+            "evidence": [
+              "github name match 2",
+              "term 'nicelydone'"
+            ]
+          }
+        ],
+        "term": "nicelydone"
+      },
+      "identifier": "https://mcp.nicelydone.club/mcp",
+      "measurements": {}
+    },
+    {
+      "name": "Refero",
+      "name_latin": "Refero",
+      "spellings": [],
+      "kind": "mcp",
+      "role": "primary",
+      "evidence_quote": "3. Refero · 그리기 전에 실제 화면부터 조사하고 설계를 잡아요 (유료 플랜)",
+      "origin": "caption",
+      "resolution": {
+        "status": "resolved",
+        "candidates": [
+          {
+            "identifier": "https://api.refero.design/mcp",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry io.github.referodesign/refero",
+              "registry namespace io.github.referodesign (GitHub verified)",
+              "term 'refero'"
+            ],
+            "official": {
+              "description": "Refero MCP gives your agent a library of real UI designs to research before drawing. Requires a paid subscription.",
+              "website": null,
+              "repository": null
+            }
+          },
+          {
+            "identifier": "helsenorge/refero",
+            "source": "github",
+            "score": 3,
+            "stars": 18,
+            "created_at": "2022-05-04T07:32:40Z",
+            "evidence": [
+              "github name match 3",
+              "term 'refero'"
+            ]
+          },
+          {
+            "identifier": "chu-/Refero",
+            "source": "github",
+            "score": 3,
+            "stars": 17,
+            "created_at": "2025-10-03T06:55:47Z",
+            "evidence": [
+              "github name match 3",
+              "term 'refero'"
+            ]
+          }
+        ],
+        "term": "refero"
+      },
+      "identifier": "https://api.refero.design/mcp",
+      "measurements": {},
+      "claims": [
+        "유료 플랜"
+      ]
+    },
+    {
+      "name": "Lazyweb",
+      "name_latin": "Lazyweb",
+      "spellings": [],
+      "kind": "mcp",
+      "role": "primary",
+      "evidence_quote": "4. Lazyweb · 실제 화면이랑 공개된 A/B 실험을 근거로 고칠 곳을 짚어요 (설치 무료, 전체 리포트는 Pro)",
+      "origin": "caption",
+      "resolution": {
+        "status": "ambiguous",
+        "candidates": [
+          {
+            "identifier": "https://www.lazyweb.com/mcp/public",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry com.lazyweb/discovery",
+              "registry namespace com.lazyweb (domain verified)",
+              "term 'lazyweb'"
+            ]
+          },
+          {
+            "identifier": "https://www.lazyweb.com/mcp",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry com.lazyweb/lazyweb",
+              "registry namespace com.lazyweb (domain verified)",
+              "term 'lazyweb'"
+            ]
+          },
+          {
+            "identifier": "superjamie/lazyweb",
+            "source": "github",
+            "score": 3,
+            "stars": 415,
+            "created_at": "2016-07-14T10:55:30Z",
+            "evidence": [
+              "github name match 3",
+              "term 'lazyweb'"
+            ]
+          }
+        ],
+        "term": "lazyweb"
+      },
+      "identifier": null,
+      "measurements": {}
+    },
+    {
+      "name": "InspoAI",
+      "name_latin": "InspoAI",
+      "spellings": [],
+      "kind": "mcp",
+      "role": "primary",
+      "evidence_quote": "5. InspoAI · 웹사이트 화면과 아이콘을 찾고, 사이트 주소 하나로 브랜드 색과 글꼴을 뽑아요 (무료 월 15회)",
+      "origin": "caption",
+      "resolution": {
+        "status": "resolved",
+        "candidates": [
+          {
+            "identifier": "https://app.inspoai.io/mcp",
+            "source": "mcp_registry",
+            "score": 5,
+            "stars": 0,
+            "evidence": [
+              "mcp registry io.github.Inspoai/inspoai",
+              "registry namespace io.github.Inspoai (GitHub verified)",
+              "term 'inspoai'"
+            ],
+            "official": {
+              "description": "Find website screens and icons, extract brand colors and fonts. Free plan includes 10 searches per month.",
+              "website": null,
+              "repository": null
+            }
+          },
+          {
+            "identifier": "kaushalpatel922/InspoAI",
+            "source": "github",
+            "score": 3,
+            "stars": 0,
+            "created_at": "2020-05-18T15:22:23Z",
+            "evidence": [
+              "github name match 3",
+              "term 'inspoai'"
+            ]
+          },
+          {
+            "identifier": "dcarvalh/inspoAI",
+            "source": "github",
+            "score": 3,
+            "stars": 0,
+            "created_at": "2024-10-30T16:43:15Z",
+            "evidence": [
+              "github name match 3",
+              "term 'inspoai'"
+            ]
+          }
+        ],
+        "term": "inspoai"
+      },
+      "identifier": "https://app.inspoai.io/mcp",
+      "measurements": {},
+      "claims": [
+        "무료 월 15회"
+      ]
+    }
+  ],
+  "limitations": [
+    "watch → yt-dlp 자식 프로세스는 실행 전 설정 점검(preflight)만 했다. 프로세스 트리 샌드박스는 없다",
+    "GitHub stargazer 목록은 2026-06-30부터 비공개 — 스타 계정 신호는 측정하지 않았다(일별 개수만)",
+    "원격 MCP 엔드포인트·상용 제품은 공식성을 코드가 판정하지 않는다. 1차 출처 확인은 판정 세션 몫"
+  ],
+  "versions": {
+    "watch": "0.3.2",
+    "llm_model": "qwen/qwen3-coder-30b",
+    "prompt_sha256": "fe9845a59d601c64522a27a6c745c768ba9a9de02265da0643962927afae8ce6"
+  },
+  "budget": {
+    "gh_calls": 6
+  },
+  "dm": {
+    "kind": "ig_reel",
+    "media_id": "18117710972284767",
+    "has_media_url": true,
+    "video": "not fetched (v2.0 caption only)"
+  },
+  "verdict": {
+    "tools": [
+      {
+        "name": "Mobbin",
+        "identifier": "https://api.mobbin.com/mcp",
+        "grade": "🤔",
+        "reason_ids": [
+          "measure.remote",
+          "identity.located"
+        ],
+        "reasons": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "claims": [
+          {
+            "claim": "출시된 앱 화면 62만 장 넘게",
+            "result": "일치",
+            "quote": "search over 620,000 screens"
+          }
+        ],
+        "claims_status": "ok",
+        "budget_cut": false,
+        "claims_total": 1,
+        "stars": null,
+        "pushed_days": null,
+        "good": [
+          "게시물의 '출시된 앱 화면 62만 장 넘게' 설명이 공식 문서와 맞아요",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "watch": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요"
+        ],
+        "cached": false,
+        "official_status": "ok",
+        "score": null,
+        "score_parts": [],
+        "alternatives": [],
+        "alternatives_checked": true
+      },
+      {
+        "name": "Nicelydone",
+        "identifier": "https://mcp.nicelydone.club/mcp",
+        "grade": "🤔",
+        "reason_ids": [
+          "measure.remote",
+          "identity.located"
+        ],
+        "reasons": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "claims": [],
+        "claims_status": "skipped",
+        "budget_cut": false,
+        "claims_total": 0,
+        "stars": null,
+        "pushed_days": null,
+        "good": [
+          "공식 위치 하나를 찾았어요"
+        ],
+        "watch": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요"
+        ],
+        "cached": false,
+        "official_status": "none",
+        "score": null,
+        "score_parts": [],
+        "alternatives": [],
+        "alternatives_checked": true
+      },
+      {
+        "name": "Refero",
+        "identifier": "https://api.refero.design/mcp",
+        "grade": "🤔",
+        "reason_ids": [
+          "measure.remote",
+          "identity.located"
+        ],
+        "reasons": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "claims": [
+          {
+            "claim": "유료 플랜",
+            "result": "일치",
+            "quote": "Requires a paid subscription"
+          }
+        ],
+        "claims_status": "ok",
+        "budget_cut": false,
+        "claims_total": 1,
+        "stars": null,
+        "pushed_days": null,
+        "good": [
+          "게시물의 '유료 플랜' 설명이 공식 문서와 맞아요",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "watch": [
+          "원격 MCP 주소라 코드는 측정하지 않았어요"
+        ],
+        "cached": false,
+        "official_status": "ok",
+        "score": null,
+        "score_parts": [],
+        "alternatives": [],
+        "alternatives_checked": true
+      },
+      {
+        "name": "Lazyweb",
+        "identifier": null,
+        "grade": "❔",
+        "reason_ids": [
+          "identity.not_located",
+          "measure.none"
+        ],
+        "reasons": [
+          "공식 위치를 하나로 정하지 못했어요",
+          "측정한 코드 정보가 없어요"
+        ],
+        "claims": [],
+        "claims_status": "skipped",
+        "budget_cut": false,
+        "claims_total": 0,
+        "stars": null,
+        "pushed_days": null,
+        "good": [],
+        "watch": [
+          "공식 위치를 하나로 정하지 못했어요",
+          "측정한 코드 정보가 없어요"
+        ],
+        "cached": false,
+        "official_status": "none",
+        "score": null,
+        "score_parts": [],
+        "alternatives": [],
+        "alternatives_checked": true
+      },
+      {
+        "name": "InspoAI",
+        "identifier": "https://app.inspoai.io/mcp",
+        "grade": "👎",
+        "reason_ids": [
+          "claim.c1",
+          "identity.located"
+        ],
+        "reasons": [
+          "캡션의 '무료 월 15회' → 불일치",
+          "공식 위치 하나를 찾았어요"
+        ],
+        "claims": [
+          {
+            "claim": "무료 월 15회",
+            "result": "불일치",
+            "quote": "Free plan includes 10 searches per month"
+          }
+        ],
+        "claims_status": "ok",
+        "budget_cut": false,
+        "claims_total": 1,
+        "stars": null,
+        "pushed_days": null,
+        "good": [
+          "공식 위치 하나를 찾았어요"
+        ],
+        "watch": [
+          "게시물의 '무료 월 15회' 설명이 공식 문서와 달라요",
+          "원격 MCP 주소라 코드는 측정하지 않았어요"
+        ],
+        "cached": false,
+        "official_status": "ok",
+        "score": null,
+        "score_parts": [],
+        "alternatives": [],
+        "alternatives_checked": true
+      }
+    ],
+    "skipped_tools": 0,
+    "skipped_names": [],
+    "status": "ok",
+    "repro": {
+      "model": "claude-golden-fake",
+      "rules_version": "4",
+      "score_version": "7",
+      "claims_prompt_sha": "16e324da80d889a733fa270eb7508fb5236d4cf88a5a349e270bb665a4148299",
+      "tokens_in": 2700,
+      "tokens_out": 180,
+      "cost_usd": null,
+      "calls": 3
+    }
+  }
+}

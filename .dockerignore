@@ -1,0 +1,13 @@
+.git
+.venv
+.cache
+out
+eval
+tests
+docs
+assets
+**/__pycache__
+deploy/.env
+deploy/secrets
+.worktrees
+.superpowers

@@ -23,7 +23,7 @@ class CannedRunner(Runner):
         super().__init__(watch_script="/w/watch.py")
         self.gh_map = gh_map
 
-    def run(self, argv):
+    def run(self, argv, timeout_s=None):
         check_argv(argv, self.watch_script)
         self.log.append(list(argv))
         body = self.gh_map.get(argv[-1])
@@ -87,6 +87,12 @@ class PipelineTextTest(unittest.TestCase):
         self.assertEqual(self.bundle["budget"]["gh_calls"], len(self.ctx.runner.log))
         self.assertIn("watch", self.bundle["versions"])
         self.assertIn("prompt_sha256", self.bundle["versions"])
+
+    def test_prompt_sha_changes_recorded(self):
+        import hashlib
+        from hype_checker.extract import SYSTEM_PROMPT
+        self.assertEqual(self.bundle["versions"]["prompt_sha256"], hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest())
+        self.assertIn("claims", SYSTEM_PROMPT)
 
     def test_mentioned_entities_are_not_searched(self):
         claude = [e for e in self.bundle["entities"] if e["name_latin"] == "Claude Code"][0]

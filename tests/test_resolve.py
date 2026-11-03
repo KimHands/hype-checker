@@ -42,6 +42,14 @@ class HelpersTest(unittest.TestCase):
         self.assertEqual((result["status"], result["term"]), ("ambiguous", "mobbin"))
         self.assertEqual(result["candidates"][0]["identifier"], "https://api.mobbin.com/mcp")
 
+    def test_mcp_candidate_keeps_registry_description(self):
+        sources = FakeSources(http={
+            "https://registry.modelcontextprotocol.io/v0/servers?search=mobbin&limit=5": load("mcp_search_mobbin.json")})
+        entity = {**candidate("Mobbin", kind="mcp"), "spellings": []}
+        result = resolve(entity, sources)
+        expected = load("mcp_search_mobbin.json")["servers"][0]["server"]["description"]
+        self.assertEqual(result["candidates"][0]["official"]["description"], expected)
+
     def test_normalize(self):
         self.assertEqual(normalize("Claude-Flow"), "claudeflow")
 
@@ -85,11 +93,13 @@ class ResolveRepoTest(unittest.TestCase):
         result = resolve(candidate("Ruflo"), self.ruflo_sources())
         self.assertLessEqual(len(result["candidates"]), 3)
 
-    def test_same_name_repos_without_corroboration_are_ambiguous(self):
+    def test_same_name_repos_resolve_only_on_dominant_stars(self):
+        """★134k vs ★450: the namesakes are unrelated older projects, the lead cannot be bought by a copy (2026-11-01)."""
         sources = FakeSources(gh={"search/repositories?q=graphify+in%3Aname&per_page=5": load("gh_search_graphify.json")})
         result = resolve(candidate("graphify"), sources)
-        self.assertEqual(result["status"], "ambiguous")
+        self.assertEqual(result["status"], "resolved")
         self.assertEqual(result["candidates"][0]["identifier"], "Graphify-Labs/graphify")
+        self.assertTrue(any("압도적" in e for e in result["candidates"][0]["evidence"]))
 
     def test_nothing_found_is_unresolved(self):
         result = resolve(candidate("zz-nothing"), FakeSources(gh={"search/repositories?q=zz-nothing+in%3Aname&per_page=5": {"items": []}}))
@@ -194,7 +204,7 @@ class PacingTest(unittest.TestCase):
 
         class R:
             log = []
-            def run(self, argv):
+            def run(self, argv, timeout_s=None):
                 return subprocess.CompletedProcess(argv, 0, stdout="{}", stderr="")
 
         waits, now = [], [0.0]

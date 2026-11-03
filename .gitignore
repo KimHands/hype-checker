@@ -3,3 +3,10 @@ out/
 .cache/
 __pycache__/
 .venv/
+deploy/.env
+deploy/secrets/
+deploy/vendor/
+.DS_Store
+assets/**/.venv/
+assets/**/node_modules/
+assets/promo/reel/renders/

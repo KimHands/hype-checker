@@ -1,12 +1,17 @@
 """The only module allowed to start subprocesses (design-v1 §4 invariants 1·3·4)."""
 
+import os
 import re
+import signal
 import subprocess
 import sys
 
 API_PATH = re.compile(r"[A-Za-z0-9._~\-/?=&%,+]+")
 PYTHONS = {"python3", sys.executable}
 COOKIE_FLAG_PREFIX = "--cookies"
+
+
+TimeoutExpired = subprocess.TimeoutExpired   # so callers can catch it without touching subprocess
 
 
 class ForbiddenCommand(Exception):
@@ -37,7 +42,23 @@ class Runner:
         self.timeout_s = timeout_s
         self.log = []
 
-    def run(self, argv):
+    def run(self, argv, timeout_s=None):
+        """`timeout_s` can only shorten the runner's own limit (a caller's remaining time budget)."""
         check_argv(argv, self.watch_script)
         self.log.append(list(argv))
-        return subprocess.run(argv, capture_output=True, text=True, timeout=self.timeout_s, check=False)
+        with subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                              start_new_session=True) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=min(self.timeout_s, timeout_s or self.timeout_s))
+            except subprocess.TimeoutExpired:
+                _kill_group(process)   # watch's ffmpeg children too, not just watch
+                raise
+        return subprocess.CompletedProcess(argv, process.returncode, stdout, stderr)
+
+
+def _kill_group(process):
+    try:
+        os.killpg(process.pid, signal.SIGKILL)
+    except ProcessLookupError:
+        pass
+    process.communicate()

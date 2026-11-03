@@ -1,0 +1,78 @@
+# hype-checker — oci-server(ARM64, Ubuntu 24.04) ~/stacks/hype-checker/deploy 용 (절차: deploy/README.md)
+# 공개는 edge 스택의 cloudflared 터널(oci-edge)로만. 호스트 포트 publish 없음
+#   hype.example.com/webhook/<HC_WEBHOOK_PATH> → http://hype-checker:8787
+# 비밀값은 서버에서만 만든다(커밋 금지):
+#   deploy/.env              GH_TOKEN (권한 없는 fine-grained PAT, 공개 레포 읽기)
+#   deploy/secrets/serve.env 수신기 전용 최소값: IG_VERIFY_TOKEN, IG_APP_SECRETS, IG_ALLOWED_SENDERS, IG_ACCOUNT_ID,
+#                            IG_OWNER_SENDER, HC_WEBHOOK_PATH (600, uid 1001) — 답장 토큰·Claude 키 없음
+#   deploy/secrets/v2.env    worker용 전체: IG_*, HC_*, ANTHROPIC_API_KEY (600, uid 1001)
+#   deploy/secrets/workflow.yaml  내 모드 정본 (600, uid 1001, 없으면 내 모드는 '스냅샷 없음')
+#   deploy/secrets/watch.env  GROQ_API_KEY 만 (600, uid 1001) — watch 음성 받아쓰기, HC_VIDEO=on 일 때
+name: hype-checker
+
+x-logging: &logging
+  driver: json-file
+  options: { max-size: "10m", max-file: "3" }
+
+x-app: &app
+  build:
+    context: ..
+    dockerfile: deploy/Dockerfile
+  image: hype-checker:latest
+  restart: unless-stopped
+  user: "1001:1001"
+  read_only: true
+  tmpfs: ["/tmp:size=64m"]
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  mem_limit: 512m
+  pids_limit: 128
+  logging: *logging
+
+services:
+  # 웹훅 수신: 서명·허용 목록 확인 후 큐에 넣기만 한다
+  serve:
+    <<: *app
+    command: ["python", "-m", "hype_checker.cli", "serve", "--host", "0.0.0.0", "--port", "8787"]
+    volumes:
+      - data:/app/out
+      - type: bind
+        source: ./secrets/serve.env
+        target: /home/app/.config/hype-checker/v2.env
+        read_only: true
+        bind: { create_host_path: false }
+    networks:
+      edge:
+        aliases: [hype-checker]
+
+  # 큐 처리·답장: 항목 단위 처리→전송, 메시지별 최대 1회 (HC_VERDICT=on 이 아니면 측정 답장)
+  work:
+    <<: *app
+    command: ["python", "-m", "hype_checker.cli", "work", "--loop", "--send"]
+    env_file: [.env]
+    volumes:
+      - data:/app/out
+      - type: bind
+        source: ./secrets/v2.env
+        target: /home/app/.config/hype-checker/v2.env
+        read_only: true
+        bind: { create_host_path: false }
+      - type: bind
+        source: ./secrets/workflow.yaml
+        target: /home/app/.config/hype-checker/workflow.yaml
+        read_only: true
+        bind: { create_host_path: false }
+      - type: bind
+        source: ./secrets/watch.env
+        target: /home/app/.config/watch/.env
+        read_only: true
+        bind: { create_host_path: false }
+    networks: [egress]
+
+volumes:
+  data:
+
+networks:
+  edge:
+    external: true
+  egress: {}

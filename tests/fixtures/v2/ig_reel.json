@@ -1,0 +1,5 @@
+{"object": "instagram", "entry": [{"time": 1761440001000, "id": "17841400000000001", "messaging": [{
+  "sender": {"id": "900000000000001"}, "recipient": {"id": "17841400000000001"}, "timestamp": 1761440001000,
+  "message": {"mid": "reel-mid-1", "attachments": [{"type": "ig_reel", "payload": {
+    "reel_video_id": 18000000000000002, "title": "요즘 개발자들 사이에서 Liner Search MCP 진짜 많이 써요",
+    "url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=18000000000000002&signature=SIG"}}]}}]}]}

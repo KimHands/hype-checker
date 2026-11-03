@@ -17,7 +17,7 @@ class FakeRunner:
         self.fail = fail
         self.calls = []
 
-    def run(self, argv):
+    def run(self, argv, timeout_s=None):
         self.calls.append(argv)
         out_dir = Path(argv[argv.index("--out-dir") + 1])
         work = out_dir / "watch-abc"

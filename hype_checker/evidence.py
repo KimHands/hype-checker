@@ -120,13 +120,13 @@ def _keep_frames(report, work, frames_dir):
         report.status = "partial"
 
 
-def collect(source, case_dir, runner, watch_script, out_root):
+def collect(source, case_dir, runner, watch_script, out_root, timeout_s=None):
     case_dir = Path(case_dir)
     guard_case_dir(case_dir, out_root)
     work = case_dir / "work"
     work.mkdir(parents=True, exist_ok=True)
     try:
-        result = runner.run(watch_argv(watch_script, source.value, work))
+        result = runner.run(watch_argv(watch_script, source.value, work), timeout_s=timeout_s)
         report = parse_watch_report(result.stdout)
         if report.status == "parse_failed" and result.returncode != 0:
             report.status = "watch_failed"
