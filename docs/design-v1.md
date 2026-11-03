@@ -164,7 +164,7 @@ tests/          unittest. 네트워크는 tests/fixtures 녹화 응답
 
 ## 8. 결정 기록
 - **정답셋 YAML 로더**: stdlib에 YAML 파서가 없다
-  - ✅ **①안 채택(2026-10-24, 김종건)**: 프로젝트 `.venv`에 PyYAML 6.0.3(`requirements-dev.txt`). 판정 대상 설치 금지 규칙과는 별개
+  - ✅ **①안 채택(2026-10-24, 운영자)**: 프로젝트 `.venv`에 PyYAML 6.0.3(`requirements-dev.txt`). 판정 대상 설치 금지 규칙과는 별개
   - ②정답셋을 JSON으로 바꾼다(사람이 읽기 불편, 앞서 YAML로 정한 결정을 뒤집음)
   - Ruby 변환은 원본이 둘이 되고 런타임이 하나 더 생겨 뺀다(리뷰 반영)
 
