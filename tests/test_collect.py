@@ -27,7 +27,7 @@ class FakeRunner:
         if self.fail:
             raise subprocess.TimeoutExpired(argv, 1)
         report = FIXTURE.replace(
-            "/private/tmp/claude-501/-Users-kimhands-Desktop-Projects-hype-checker/3f455d6b-b61a-48fc-9ce9-8a831460be33/scratchpad/watch-run/watch-auqqgece",
+            "/tmp/scratchpad/watch-run/watch-auqqgece",
             str(work))
         return subprocess.CompletedProcess(argv, 0, stdout=report, stderr="")
 

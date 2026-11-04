@@ -9,4 +9,8 @@ deploy/vendor/
 .DS_Store
 assets/**/.venv/
 assets/**/node_modules/
+assets/promo/*
+!assets/promo/reel/
+!assets/promo/reel-v1-backup/
 assets/promo/reel/renders/
+assets/vo/

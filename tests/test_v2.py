@@ -124,6 +124,15 @@ class InboxTest(unittest.TestCase):
         self.assertEqual(inbox.pending(), [])
         self.assertFalse(inbox.enqueue(share))
 
+    def test_pending_keeps_arrival_order_when_the_clock_stands_still(self):
+        from unittest import mock
+        inbox = Inbox(Path(tempfile.mkdtemp()))
+        mids = [f"m{n}" for n in range(30)]
+        with mock.patch("hype_checker.v2.inbox.time.time_ns", return_value=1_800_000_000_000_000_000):
+            for mid in mids:
+                inbox.enqueue(text_share(mid, "x")[0])
+        self.assertEqual([inbox.read(item)["mid"] for item in inbox.pending()], mids)
+
 
 class ConcurrencyTest(unittest.TestCase):
     def test_same_message_arriving_twice_at_once_is_queued_once(self):

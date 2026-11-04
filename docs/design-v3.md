@@ -2,7 +2,7 @@
 
 > 상태: **확정 r2 (2026-11-01 사용자 승인: "전부 권장대로")** · 2026-11-01 · Codex 반박 리뷰 1회 반영(§11)
 > 근거: v2 엔드투엔드 완료(`docs/design-v2.md`), 사용자 지시 "릴스 공유 → 쓸 만한지 판정해 알려주는 시스템(허락한 사람만), 내 계정은 워크플로우 병합 판단"
-> 관련 ADR 초안: `~/Ops/adr/0016-hype-checker-auto-verdict.md` (프로젝트 규칙 변경 — 사용자 승인 전엔 적용 안 함)
+> 관련 ADR 초안: `ops/adr/0016-hype-checker-auto-verdict.md` (프로젝트 규칙 변경 — 사용자 승인 전엔 적용 안 함)
 
 ## 0. 결정 기록
 | # | 결정 | 누가 | 상태 |
@@ -73,7 +73,7 @@ DM ─ webhook(v2 그대로) ─ queue ─ work --loop (항목 하나씩: 처리
 
 ### 3-6. 내 모드 (`owner.py`)
 - 정본 `~/.config/hype-checker/workflow.yaml`(600): 항목마다 `id`(레포·패키지·URL 정본), `aliases`, `capabilities`(기능 한두 줄), `lane`, `status`(active/trial/retired), `note`(예외)
-  - 첫 버전: Claude가 research `workflow-adoption.md`·`log.md` 판정 B·`~/Ops/domains`·설치 목록에서 **초안을 만들고 사람이 승인**
+  - 첫 버전: Claude가 research `workflow-adoption.md`·`log.md` 판정 B·`ops/domains`·설치 목록에서 **초안을 만들고 사람이 승인**
   - `hype-check snapshot`은 설치 목록을 훑어 "정본에 없는 항목"만 제안(자동 반영 안 함)
 - 판정 B
   - 정본의 `id`나 `aliases`와 일치 + `status=active` → `이미보유`(규칙)

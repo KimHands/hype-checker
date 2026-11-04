@@ -1,6 +1,6 @@
 # hype-checker 서버 배포 (oci-server)
 
-근거: ADR `~/Ops/adr/0017-hype-checker-secrets-on-oci.md`. 서버 규칙: `~/Desktop/Projects/oci-server/docs/server.md`
+근거: ADR `ops/adr/0017-hype-checker-secrets-on-oci.md`. 서버 규칙: `projects/oci-server/docs/server.md`
 
 ## 구성
 - 이미지 하나, 서비스 둘: `serve`(웹훅 수신, 외부 네트워크 `edge`에 별칭 `hype-checker`) · `work`(큐 처리·답장, `--loop --send`)

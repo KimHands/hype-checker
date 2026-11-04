@@ -3,17 +3,20 @@
 
   <h1>HyperChecker</h1>
 
+  <p>서비스 이름은 HyperChecker, 저장소 이름은 <code>hype-checker</code>입니다.</p>
+
   <p><strong>"그 MCP, 진짜 쓸 만해?"</strong><br>
-  인스타 릴스를 DM으로 보내면, 소개된 개발 도구를 찾아 공개 자료로 확인해 답장합니다.</p>
+  인스타 릴스를 DM으로 보내면, 소개된 개발 도구를 공개 자료로 확인해 답장하는 에이전트입니다.</p>
 
   <p>
     <a href="https://www.instagram.com/hyper_checker/"><img src="https://img.shields.io/badge/Instagram-@hyper__checker-E4405F?logo=instagram&logoColor=white" alt="Instagram @hyper_checker"></a>
+    <a href="https://github.com/KimHands/hype-checker/actions/workflows/ci.yml"><img src="https://github.com/KimHands/hype-checker/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
   </p>
 
   <p>
     <a href="#바로-써-보기">바로 써 보기</a> ·
     <a href="#평가-결과">평가 결과</a> ·
-    <a href="#설계에서-지킨-원칙">설계 원칙</a> ·
+    <a href="#가드레일-설계에서-지킨-원칙">가드레일</a> ·
     <a href="PRIVACY.md">개인정보처리방침</a>
   </p>
 </div>
@@ -101,11 +104,13 @@ flowchart LR
 | 저장 | 파일 큐, SQLite 캐시(같은 게시물 7일, 같은 도구 3일) |
 | 입구 | Meta Instagram API, Cloudflare Tunnel + WAF |
 
-## 설계에서 지킨 원칙
+## 가드레일: 설계에서 지킨 원칙
+
+LLM 출력과 게시물 입력을 신뢰하지 않는다는 전제로 둔 가드레일입니다.
 
 **LLM의 말을 그대로 믿지 않습니다.** 주장이 공식 문서와 맞다고 하려면 Claude가 문단 번호와 원문 구절을 내야 하고, 그 구절이 실제로 그 문단에 있는지 코드가 확인합니다. 더 유명한 대안은 Claude 판단을 코드로 검증할 수 없어서 점수에 넣지 않고 소개만 합니다.
 
-**게시물은 신뢰하지 않는 입력입니다.** 캡션, 전사, 화면 글자, README는 `<untrusted>` 블록에 데이터로만 넣습니다. 출력은 정해진 값과 원문 인용으로 제한해, 영상 속 지시문이 판정을 바꾸지 못하게 했습니다.
+**게시물은 신뢰하지 않는 입력입니다.** 캡션, 전사, 화면 글자, README는 `<untrusted>` 블록에 데이터로만 넣습니다. 출력은 정해진 값과 원문 인용으로 제한해, 영상 속 지시문이 판정에 미치는 영향을 줄였습니다.
 
 **판정 대상을 실행하지 않습니다.** 설치도 `npx`도 하지 않고 공개 메타데이터와 문서만 읽습니다. 서브프로세스는 허용 목록으로 제한하고, 컨테이너는 읽기 전용 루트에 권한을 모두 뺀 상태로 돌립니다.
 
@@ -156,7 +161,11 @@ flowchart LR
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 .venv/bin/python -m hype_checker check <URL·mp4·캡션 텍스트>     # → out/<id>/bundle.md
-.venv/bin/python -m unittest discover -s tests                   # 테스트 598개
+.venv/bin/python -m unittest discover -s tests
 ```
 
 서버 배포는 [`deploy/README.md`](deploy/README.md), 설계 과정은 [`docs/design-v1.md`](docs/design-v1.md)부터 [`v2`](docs/design-v2.md), [`v3`](docs/design-v3.md), [`v4`](docs/design-v4.md)까지 있습니다.
+
+## 공개본에 대해
+
+이 저장소는 비공개 개발 저장소에서 운영 메모와 계정 정보를 뺀 공개본입니다. 이력을 스냅샷으로 정리해 올리기 때문에 커밋 수가 실제 개발 이력보다 적습니다. 정답셋의 판정 사유 글도 생략했습니다.

@@ -1,6 +1,6 @@
 # hype-checker v3 판정 정답셋 (2026-11-01 운영자 승인 — holdout 고정)
 #
-# 원천: general = ~/Desktop/Career/research/log.md 도구 카드 (읽기 전용으로 옮김, 2026-11-01 작성)
+# 원천: general = career/research/log.md 도구 카드 (읽기 전용으로 옮김, 2026-11-01 작성)
 #       adversarial = 합성 입력 (캡션은 전부 데이터. 실재 확인 안 된 식별자는 쓰지 않고 null + why로 기대 동작 기술)
 # 원칙
 #   - 등급은 docs/design-v3.md §1 필수 증거로 매핑한다. 카드의 사람 판정(비권장 등)이 §1보다 강해도 §1을 따른다

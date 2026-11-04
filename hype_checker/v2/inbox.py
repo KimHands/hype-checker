@@ -17,16 +17,19 @@ from dataclasses import asdict
 from pathlib import Path
 
 DIRS = ("queue", "done", "failed")
+ARRIVAL_STEP_NS = 1000
 
 
 class WorkerBusy(Exception):
     pass
 
 
-def _write_private(path, data):
+def _write_private(path, data, mtime_ns=None):
     fd, temp = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)  # mode 600, unique
     with os.fdopen(fd, "w") as handle:
         json.dump(data, handle, ensure_ascii=False)
+    if mtime_ns is not None:
+        os.utime(temp, ns=(mtime_ns, mtime_ns))
     os.replace(temp, path)
 
 
@@ -44,6 +47,7 @@ class Inbox:
     def __init__(self, root):
         self.root = Path(root)
         self._publish = threading.Lock()   # serve is threaded: check-then-publish must be one step
+        self._last_arrival_ns = 0
         for name in DIRS:
             (self.root / name).mkdir(parents=True, exist_ok=True, mode=0o700)
             (self.root / name).chmod(0o700)
@@ -60,11 +64,16 @@ class Inbox:
         with self._publish:
             if self._seen(key):
                 return False
-            _write_private(self.root / "queue" / key, asdict(share))
+            _write_private(self.root / "queue" / key, asdict(share), mtime_ns=self._next_arrival_ns())
             return True
 
+    def _next_arrival_ns(self):
+        """Filesystem clocks tick coarsely, so two quick arrivals could tie and lose their order."""
+        self._last_arrival_ns = max(time.time_ns(), self._last_arrival_ns + ARRIVAL_STEP_NS)
+        return self._last_arrival_ns
+
     def pending(self):
-        return sorted((self.root / "queue").glob("[!.]*.json"), key=lambda p: p.stat().st_mtime)
+        return sorted((self.root / "queue").glob("[!.]*.json"), key=lambda p: p.stat().st_mtime_ns)
 
     def read(self, item):
         try:

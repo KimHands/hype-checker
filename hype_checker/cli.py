@@ -185,7 +185,7 @@ def _runtime_fields(config):
 
 
 def _snapshot():
-    """Names only: skill folders, ~/Ops/bin files and mcpServers keys of ~/.claude.json — no settings or secrets."""
+    """Names only: skill folders, ops/bin files and mcpServers keys of ~/.claude.json — no settings or secrets."""
     from hype_checker.owner import WorkflowError, installed_names, load_workflow, snapshot_suggestions
     try:
         workflow = load_workflow(WORKFLOW_PATH)

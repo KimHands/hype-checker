@@ -1,6 +1,6 @@
 # hype-checker v2 설계 — DM 공유 수신 (2026-10-26)
 
-> 근거: research `requests/hype-checker-feasibility.md` §2-3·§4-4, ADR `~/Ops/adr/0011-hype-checker-v2-official-api-only.md`, Meta 공식 문서 원문 재확인(2026-10-26, §8 출처). v1 설계: `docs/design-v1.md`
+> 근거: research `requests/hype-checker-feasibility.md` §2-3·§4-4, ADR `ops/adr/0011-hype-checker-v2-official-api-only.md`, Meta 공식 문서 원문 재확인(2026-10-26, §8 출처). v1 설계: `docs/design-v1.md`
 
 ## 1. 목표와 범위
 - 내 전용 IG 프로페셔널 계정에 릴스·게시물을 DM으로 공유하면, v1 파이프라인이 **캡션으로** 측정 묶음을 만들고 짧은 요약을 DM으로 답한다

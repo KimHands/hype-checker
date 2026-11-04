@@ -1,6 +1,6 @@
 # 블라인드 판정 세션 기록 (2026-10-24)
 
-정답셋을 볼 수 없는 별도 에이전트에게 코드 단계 묶음 6개(`out/20261024-033744-*`, 결과 `eval/results/2026-10-24T033913Z.json`)를 주고 `resume`·`drop`만 허용했다. 금지 경로: `eval/`, `README.md`, `docs/`, `tests/`, `HANDOFF.md`, `~/Desktop/Career/`, 웹 검색.
+정답셋을 볼 수 없는 별도 에이전트에게 코드 단계 묶음 6개(`out/20261024-033744-*`, 결과 `eval/results/2026-10-24T033913Z.json`)를 주고 `resume`·`drop`만 허용했다. 금지 경로: `eval/`, `README.md`, `docs/`, `tests/`, `HANDOFF.md`, `career/`, 웹 검색.
 이 시점의 `resume`은 아직 개입 기록(`interventions`)을 남기지 않아서, 근거는 에이전트 보고를 여기에 옮긴다.
 
 | 묶음 | 조치 | 근거(에이전트 보고) |
