@@ -25,15 +25,16 @@ from hype_checker.pipeline import check, sweep_video_leftovers
 from hype_checker.v2.inbox import _write_private
 from hype_checker.v2.limits import Limits
 from hype_checker.v2.media import fetch_reel, is_reel_page
-from hype_checker.v2.reply import EXTRACTION_FAILED, format_fallback_reply, format_reply, format_verdict_replies
+from hype_checker.v2.reply import EXTRACTION_FAILED, format_fallback_reply, format_reply, format_verdict_replies, video_problem
 from hype_checker.v2.sending import has_unsent, new_messages, send_messages
-from hype_checker.v2.webhook import is_allowed, is_public, within_reply_window
+from hype_checker.v2.webhook import UNSUPPORTED, is_allowed, is_public, within_reply_window
 from hype_checker.verdict import Budget, estimate_cost, judge_bundle
 
 NO_CAPTION = "(캡션 없음)"
 LIMIT_REACHED = "오늘 확인 한도에 도달했어요. 한국 시간 오전 9시 이후에 다시 보내 주세요."
 SHARE_GUIDE = ("확인할 릴스나 게시물을 이 DM으로 공유해 주세요. GitHub·npm·PyPI 링크도 괜찮아요. "
                "계정당 하루 2개까지 확인해 드려요.")
+UNSUPPORTED_GUIDE = "이 형식은 확인하지 못해요. 릴스나 게시물을 공유해 주세요. GitHub·npm·PyPI 링크도 괜찮아요."
 ACK = {"ig_reel": "릴스 잘 받았어요! 🔎 영상 속 도구를 찾아 확인하는 중이에요. 1~2분 안에 결과를 보내 드릴게요.",
        "ig_post": "게시물 잘 받았어요! 🔎 소개된 도구를 찾아 확인하는 중이에요. 1~2분 안에 결과를 보내 드릴게요."}
 ITEM_DEADLINE_S = 180
@@ -73,6 +74,8 @@ def _video_note(bundle, fetch_error):
     if fetch_error:
         return f"not fetched ({fetch_error})"
     status = bundle["evidence"].get("status")
+    if video_problem(bundle):
+        return f"not read ({video_problem(bundle)})"
     return "caption only" if status == "not_run" else f"read, then deleted (watch {status})"
 
 
@@ -157,7 +160,7 @@ def _acknowledge(share, send, now_s):
         return False
 
 
-REPLY_VERSION = "4.5"   # bump when the reply text or what feeds it changes, so old saved replies are not reused
+REPLY_VERSION = "4.6"   # bump when the reply text or what feeds it changes, so old saved replies are not reused
 RULES = f"{grade.RULES_VERSION}.{score.SCORE_VERSION}.{claims.CLAIMS_PROMPT_SHA[:8]}.{REPLY_VERSION}"
 CACHED_NOTE = "같은 게시물을 {}에 확인한 결과를 다시 보내 드려요. 스타 수 등은 그때 기준이에요."
 
@@ -238,6 +241,9 @@ def _item_cost(budget, ctx, usage_before, prices):
 
 def _check_share(share, ctx, config, runtime, now_s, media_dir, send=None):
     mode, today, sender = _mode(share, config), _today(now_s), share["sender"]
+    if share.get("kind") == UNSUPPORTED:
+        guide = [UNSUPPORTED_GUIDE] if runtime.limits.first_notice(f"unsupported:{sender}", today) else []
+        return {"mode": mode, "unsupported": True, "messages": new_messages(guide)}
     if _is_small_talk(share, config):
         guide = [SHARE_GUIDE] if runtime.limits.first_notice(f"guide:{sender}", today) else []
         return {"mode": mode, "small_talk": True, "messages": new_messages(guide)}
@@ -276,7 +282,7 @@ def _check_share(share, ctx, config, runtime, now_s, media_dir, send=None):
 def _previous_record_id(inbox, sender):
     mine = [(record["share"].get("timestamp_ms", 0), path.stem) for path, record in inbox.done()
             if record and (record.get("share") or {}).get("sender") == sender
-            and record["share"].get("kind") != "dispute"]
+            and record["share"].get("kind") not in ("dispute", UNSUPPORTED)]
     return max(mine)[1] if mine else None
 
 

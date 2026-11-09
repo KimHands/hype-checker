@@ -9,7 +9,7 @@ from socket import SHUT_RDWR
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qsl, urlparse
 
-from hype_checker.v2.webhook import media_link_shape, matched_secret, parse_shares, signature_shaped, unknown_senders, verify_subscription
+from hype_checker.v2.webhook import UNSUPPORTED, media_link_shape, matched_secret, not_queued_shape, parse_shares, signature_shaped, unknown_senders, verify_subscription
 
 PATH = "/webhook"
 MAX_BODY = 1_000_000
@@ -116,7 +116,10 @@ def make_handler(config, inbox, clock=time.time, path=PATH):
             for sender in set(unknown_senders(payload, config)) - logged_senders:
                 logged_senders.add(sender)
                 print(f"pending: first DM sender {sender} — put it in IG_ALLOWED_SENDERS", file=sys.stderr)
-            for share in parse_shares(payload, config, clock()):
+            shares = parse_shares(payload, config, clock())
+            if (not shares or any(share.kind == UNSUPPORTED for share in shares)) and (shape := not_queued_shape(payload)):
+                print(f"dm not checkable: {shape}", file=sys.stderr)
+            for share in shares:
                 if config.video == "on" and share.has_media_url and not share.media_url:
                     print(f"media link refused: {media_link_shape(payload)}", file=sys.stderr)
                 inbox.enqueue(share)

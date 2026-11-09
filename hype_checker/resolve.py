@@ -246,6 +246,19 @@ def attach_written_repos(entities, text):
     return linked
 
 
+def _listed_repo(entity, text):
+    name = (entity.get("name") or "").strip()
+    return entity.get("kind") == "repo" and SHORTHAND.match(name) and name.lower() in text.lower()
+
+
+def promote_listed_repos(entities, text):
+    """A post that only lists repos ('주간 TOP 10') recommends none of them, yet the owner/repo it wrote is
+    what the reader is asking about. A post with its own tool keeps the listed ones as mentions."""
+    if any(e.get("role") == "primary" for e in entities):
+        return entities
+    return [{**e, "role": "primary"} if _listed_repo(e, text) else e for e in entities]
+
+
 def _written_repo(entity, sources):
     """A post that spells out owner/repo names the repo itself; searching by name could pick a copy instead."""
     for text in (entity.get("written_repo"), entity.get("name"), entity.get("name_latin")):

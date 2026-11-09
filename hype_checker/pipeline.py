@@ -19,7 +19,7 @@ from hype_checker.measure.npm import measure_npm
 from hype_checker.measure.pypi import measure_pypi
 from hype_checker.onscreen import read_screen
 from hype_checker import samename
-from hype_checker.resolve import attach_written_repos, resolve
+from hype_checker.resolve import attach_written_repos, promote_listed_repos, resolve
 
 WATCH_VERSION = "0.3.2"
 NPM_EVIDENCE = re.compile(r"^npm:(\S+) → ")
@@ -222,6 +222,7 @@ def _entities(source, case_dir, ctx, bundle, video=None):
                             "error": extraction.error, "model": LLM_MODEL}
     origin = "transcript" if text["transcript"] or text.get("screen") else "caption"
     entities = attach_written_repos(extraction.entities, f"{text['title']}\n{text['caption']}")
+    entities = promote_listed_repos(entities, f"{text['title']}\n{text['caption']}\n{text.get('screen', '')}")
     return [{**entity, "origin": origin} for entity in entities]
 
 

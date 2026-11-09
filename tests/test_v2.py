@@ -78,17 +78,15 @@ class ParseTest(unittest.TestCase):
         [share] = parse_shares(payload, CONFIG, NOW_S)
         self.assertEqual((share.kind, share.caption), ("text", "https://github.com/ruvnet/ruflo"))
 
-    def test_drops_strangers_echoes_unsupported_and_other_objects(self):
+    def test_drops_strangers_echoes_and_other_objects(self):
         stranger = fixture("ig_post.json")
         stranger["entry"][0]["messaging"][0]["sender"]["id"] = "123"
         echo = fixture("ig_post.json")
         echo["entry"][0]["messaging"][0]["message"]["is_echo"] = True
-        unsupported = fixture("ig_post.json")
-        unsupported["entry"][0]["messaging"][0]["message"] = {"mid": "u1", "is_unsupported": True}
         page = {**fixture("ig_post.json"), "object": "page"}
         other_account = fixture("ig_post.json")
         other_account["entry"][0]["messaging"][0]["recipient"]["id"] = "999"
-        for payload in (stranger, echo, unsupported, page, other_account, {}):
+        for payload in (stranger, echo, page, other_account, {}):
             self.assertEqual(parse_shares(payload, CONFIG, NOW_S), [])
 
     def test_logs_first_dm_sender_only_while_pending(self):

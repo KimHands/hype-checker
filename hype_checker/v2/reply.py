@@ -13,6 +13,11 @@ MAX_BYTES = 1000
 TITLE = "🔎 Hyper Checker 측정 결과"
 NOTICE = "※ 판정 전 자료예요. 이름은 게시물 표기 그대로이고, 좋다·나쁘다는 평가가 아니에요."
 NOTHING = "게시물에서 소개하는 도구 이름을 찾지 못했어요."
+LINK_PLEASE = "GitHub·npm·PyPI 링크를 알고 계시면 보내 주세요."
+NOTHING_IN_IMAGE_POST = f"캡션에서 도구 이름을 찾지 못했어요. 이미지 속 글자는 아직 읽지 못해요. {LINK_PLEASE}"
+NOTHING_UNREAD_VIDEO = {"restricted": f"이 릴스는 공개 범위가 제한돼 영상을 읽지 못했고, 캡션에도 도구 이름이 없었어요. {LINK_PLEASE}",
+                        "unread": "인스타그램에서 영상을 불러오지 못했고, 캡션에도 도구 이름이 없었어요. 잠시 뒤 다시 보내 주세요."}
+CAPTION_ONLY = "영상을 읽지 못해 캡션 내용만 확인한 결과예요."
 FALLBACK_NOTE = "이번엔 판정 없이 측정만 보내요."
 VERDICT_TITLE = "🔎 Hyper Checker 자동 확인 (게시물 기준)"
 EXTRACTION_FAILED = "지금은 처리하지 못했어요. 잠시 뒤 다시 보내 주세요."
@@ -63,7 +68,7 @@ def _pack(parts, separator="\n"):
 def format_reply(bundle, case_id=None, fallback=False):
     """Measurement reply as 1–3 messages. No internal ids: the reader cannot open a 'bundle'."""
     primary = [e for e in bundle.get("entities", []) if e.get("role") == "primary"]
-    intro = f"게시물에서 소개하는 도구 {len(primary)}개의 공개 위치를 찾아봤어요." if primary else NOTHING
+    intro = f"게시물에서 소개하는 도구 {len(primary)}개의 공개 위치를 찾아봤어요." if primary else _nothing_found(bundle)
     head = [TITLE, *([FALLBACK_NOTE] if fallback else []), intro, NOTICE, ""]
     return _pack(["\n".join(head), *[_entry(number, entity) for number, entity in enumerate(primary, 1)]])
 
@@ -170,9 +175,31 @@ def _extraction_failed(bundle):
     return (bundle.get("extraction") or {}).get("status") in ("failed", "skipped")
 
 
+def video_problem(bundle):
+    """Why a shared video went unread: "restricted", "unread", or None when it was read (even without speech)."""
+    evidence = bundle.get("evidence") or {}
+    errors = " ".join(str(error) for error in evidence.get("errors") or [])
+    if "available to everyone" in errors:
+        return "restricted"
+    return "unread" if evidence.get("status") == "watch_failed" or "Media unavailable" in errors else None
+
+
+def _nothing_found(bundle):
+    problem = video_problem(bundle)
+    if problem:
+        return NOTHING_UNREAD_VIDEO[problem]
+    return NOTHING_IN_IMAGE_POST if (bundle.get("dm") or {}).get("kind") == "ig_post" else NOTHING
+
+
+def _caption_only_note(bundle):
+    return [CAPTION_ONLY] if video_problem(bundle) and _kind_by_name(bundle) else []
+
+
 def format_fallback_reply(bundle, case_id):
     """Measurement-only reply for HC_VERDICT=on without a usable verdict; a failed extraction keeps its own notice."""
-    return [EXTRACTION_FAILED] if _extraction_failed(bundle) else format_reply(bundle, case_id, fallback=True)
+    if _extraction_failed(bundle):
+        return [EXTRACTION_FAILED]
+    return _caption_only_note(bundle) + format_reply(bundle, case_id, fallback=True)
 
 
 def format_verdict_replies(bundle, case_id, owner_lines=None):
@@ -180,8 +207,9 @@ def format_verdict_replies(bundle, case_id, owner_lines=None):
         return [EXTRACTION_FAILED]
     tools = (bundle.get("verdict") or {}).get("tools") or []
     if not tools:
-        return format_reply(bundle, case_id, fallback=True) if _kind_by_name(bundle) else [NOTHING]
-    return [*_summary(bundle["verdict"], _kind_by_name(bundle), owner_lines), *_detail_messages(tools)]
+        return format_fallback_reply(bundle, case_id) if _kind_by_name(bundle) else [_nothing_found(bundle)]
+    return [*_caption_only_note(bundle), *_summary(bundle["verdict"], _kind_by_name(bundle), owner_lines),
+            *_detail_messages(tools)]
 
 
 class SendRejected(Exception):

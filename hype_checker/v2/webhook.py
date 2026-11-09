@@ -18,6 +18,7 @@ MAX_CAPTION = 5000
 PENDING = "pending"
 PUBLIC = "*"   # IG_ALLOWED_SENDERS=*: anyone may use it, within the daily limits
 DISPUTE_WORD = "정정"
+UNSUPPORTED = "unsupported"   # a DM we cannot check (photo, story, voice, …): answered with a guide, never dropped silently
 REPLY_WINDOW_MS = 24 * 3600 * 1000  # Send API: reply only within 24 h of the user's message
 
 
@@ -37,7 +38,7 @@ class Config:
 class Share:
     mid: str
     sender: str
-    kind: str            # ig_post | ig_reel | text | dispute
+    kind: str            # ig_post | ig_reel | text | dispute | unsupported
     caption: str
     media_id: str | None = None
     has_media_url: bool = False
@@ -105,7 +106,7 @@ def _accepted(event, message, config, now_s):
     return (is_allowed(sender, config) and message.get("mid") and isinstance(timestamp, int)
             and within_reply_window(timestamp, now_s)
             and (config.account_id is None or recipient == config.account_id)
-            and not message.get("is_echo") and not message.get("is_unsupported"))
+            and not message.get("is_echo") and not message.get("is_deleted"))
 
 
 def _shares_in(event, config, now_s):
@@ -117,6 +118,8 @@ def _shares_in(event, config, now_s):
     if not shares and message.get("text"):
         text = str(message["text"])[:MAX_CAPTION]
         shares = [Share(**base, kind="dispute" if text.strip() == DISPUTE_WORD else "text", caption=text)]
+    if not shares and (message.get("attachments") or message.get("is_unsupported")):
+        shares = [Share(**base, kind=UNSUPPORTED, caption="")]
     return shares[:1]
 
 
@@ -125,6 +128,14 @@ def media_link_shape(payload):
     events = [e for entry in payload.get("entry") or [] for e in entry.get("messaging") or []]
     links = [(a.get("payload") or {}).get("url") for e in events for a in (e.get("message") or {}).get("attachments") or []]
     return ", ".join(f"{urlparse(u).scheme}://{urlparse(u).hostname}" for u in links if isinstance(u, str)) or "none"
+
+
+def not_queued_shape(payload):
+    """Field names and attachment types of DMs we could not check (never ids, text or links), to learn what arrives."""
+    events = [e for entry in payload.get("entry") or [] for e in entry.get("messaging") or []]
+    messages = [e["message"] for e in events if e.get("message") and not e["message"].get("is_echo")]
+    return "; ".join(f"fields={','.join(sorted(m))} types={','.join(str(a.get('type')) for a in m.get('attachments') or [])}"
+                     for m in messages)
 
 
 def diagnosing(config):
